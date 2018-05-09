@@ -1,0 +1,29 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    x:Class="I95Dev.Connector.UI.App"
+    Startup="Application_Startup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/BasicStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/ListViewStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/ComboBoxStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/ButtonStyles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Styles/ExpanderStyles.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Messages/Strings.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Messages/StringsAdmin.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Messages/StringsDashboard.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/I95DevGPConnector;component/Resources/Messages/AppStatus.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <GridLength x:Key="PageHeadingHeight">30</GridLength>
+            <GridLength x:Key="DefaultRowHeight">24</GridLength>
+            <system:Double x:Key="FontSize">13</system:Double>
+            <system:Double x:Key="RowHeight">28</system:Double>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

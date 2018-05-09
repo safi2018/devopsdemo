@@ -1,0 +1,179 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Controls;assembly=I95Dev.Connector.UI.Base"
+    xmlns:admin="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Admin;assembly=I95Dev.Connector.UI.Base"
+    x:Class="I95Dev.Connector.UI.Views.Admin.CategoryMasterView"
+    mc:Ignorable="d"
+    d:DesignHeight="700"
+    d:DesignWidth="900"
+    d:DataContext="{d:DesignInstance Type=admin:CategoryMasterViewModel}">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Text="{DynamicResource AdminCategoryMasterHeading}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+
+        <Grid
+            Grid.Row="1"
+            Margin="5,5,5,5"
+            Background="{StaticResource PanelBackground}">
+            <Grid
+                Margin="5,5,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    <TextBlock
+                        Text="{DynamicResource AdminCategoryMasterFormCategory}"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <TextBox
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        Text="{Binding Category.CategoryName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    <TextBlock
+                        Text="{DynamicResource AdminCategoryMasterFormParentCategory}"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <ComboBox
+                        Width="200"
+                        DisplayMemberPath="CategoryName"
+                        SelectedValuePath="Id"
+                        ItemsSource="{Binding Categories}"
+                        SelectedValue="{Binding Category.ParentId, Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="2">
+                    <TextBlock
+                        Text="{DynamicResource AdminCategoryMasterFormMailIsRequired}"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <CheckBox
+                        IsChecked="{Binding Category.IsMailRequired, Mode=TwoWay}"
+                        Content="Yes"
+                        Height="28" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="3">
+                    <TextBlock
+                        Text="{DynamicResource AdminCategoryMasterFormHierarchyLevel}"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <TextBlock
+                        Width="200"
+                        Text="{Binding Category.HierarchyLevel, Mode=OneWay}"
+                        Style="{StaticResource TextBlockRight}" Height="28" Margin="0,16,0,0" />
+                </StackPanel>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="4"
+                    Grid.Column="0"
+                    HorizontalAlignment="Center">
+                    <Button
+                        Content="{StaticResource ButtonReset}"
+                        Width="100"
+                        Command="{Binding ResetCommand}"
+                        Style="{StaticResource FormButton}" />
+                    <Button
+                        Content="{StaticResource ButtonSave}"
+                        Width="100"
+                        Command="{Binding SaveCommand}"
+                        Visibility="{Binding ShowSave,Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Margin="5,0,0,0"
+                        Style="{StaticResource FormButton}" />
+                    <Button
+                        Content="{StaticResource ButtonUpdate}"
+                        Width="100"
+                        Command="{Binding UpdateCommand}"
+                        Visibility="{Binding ShowUpdate,Converter={StaticResource BooleanToVisibilityConverter}}"
+                        Margin="5,0,0,0"
+                        Style="{StaticResource FormButton}" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <ListView
+            Margin="5,5,5,5"
+            Grid.Row="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            controls:GridViewSort.AutoSort="True"
+            ItemsSource="{Binding Categories}"
+            SelectedItem="{Binding Category, Mode=TwoWay}"
+            controls:ListViewLayoutManager.Enabled="True">
+            <ListView.View>
+                <GridView
+                    AllowsColumnReorder="False">
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding Id}"
+                        Header="{DynamicResource AdminCategoryMasterGridId}"
+                        controls:GridViewSort.PropertyName="Id"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding CategoryName}"
+                        Header="{DynamicResource AdminCategoryMasterGridCategoryName}"
+                        controls:GridViewSort.PropertyName="CategoryName"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding ParentId}"
+                        Header="{DynamicResource AdminCategoryMasterGridParentId}"
+                        controls:GridViewSort.PropertyName="ParentId"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding CreatedTime}"
+                        Header="{DynamicResource AdminCategoryMasterGridCreatedTime}"
+                        controls:GridViewSort.PropertyName="CreatedTime"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding ModifiedTime}"
+                        Header="{DynamicResource AdminCategoryMasterGridModifiedTime}"
+                        controls:GridViewSort.PropertyName="ModifiedTime"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding IsMailRequired}"
+                        Header="{DynamicResource AdminCategoryMasterGridMailIsRequired}"
+                        controls:GridViewSort.PropertyName="IsMailRequired"
+                        controls:ProportionalColumn.Width="1" />
+                    <GridViewColumn
+                        DisplayMemberBinding="{Binding HierarchyLevel}"
+                        Header="{DynamicResource AdminCategoryMasterGridHierarchyLevel}"
+                        controls:GridViewSort.PropertyName="HierarchyLevel"
+                        controls:ProportionalColumn.Width="1" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

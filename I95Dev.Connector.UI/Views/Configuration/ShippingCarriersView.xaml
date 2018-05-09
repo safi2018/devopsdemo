@@ -1,0 +1,208 @@
+﻿<UserControl
+    x:Class="I95Dev.Connector.UI.Views.Configuration.ShippingCarriersView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:configuration="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Configuration;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Controls;assembly=I95Dev.Connector.UI.Base"
+    xmlns:converters="clr-namespace:I95Dev.Connector.UI.Base.Services.Converters;assembly=I95Dev.Connector.UI.Base"
+    mc:Ignorable="d"
+    d:DesignHeight="700"
+    d:DesignWidth="800"
+    d:DataContext="{d:DesignInstance configuration:ShippingCarrierViewModel}">
+
+    <UserControl.Resources>
+        <converters:BoolInverter x:Key="BoolInverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid
+            IsEnabled="{Binding ShowPopup, Converter={StaticResource BoolInverter}, Mode=OneWay}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Text="{DynamicResource AdminCarrierSettingsHeading}"
+                Style="{StaticResource PageHeader}"
+                Margin="5,5,0,5" />
+
+            <Grid
+                Grid.Row="2"
+                Margin="5"
+                Background="{StaticResource PanelBackground}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                    FontWeight="Bold"
+                    HorizontalAlignment="Right"
+                    Margin="0,3,5,3"
+                    Style="{StaticResource NormalTextBlock}">
+                    <Hyperlink
+                        Command="{Binding AddNewCarrierCommand}">
+                        <TextBlock
+                            Text="{DynamicResource AdminCarrierSettingsAddNew}" />
+                    </Hyperlink>
+                </TextBlock>
+
+                <ListView
+                    Grid.Row="1"
+                    x:Name="ListViewShipments"
+                    controls:GridViewSort.AutoSort="True"
+                    SelectionMode="Single"
+                    ItemsSource="{Binding Records}"
+                    controls:ListViewLayoutManager.Enabled="True">
+                    <ListView.View>
+                        <GridView
+                            AllowsColumnReorder="False">
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding CarrierCode}"
+                                Header="{DynamicResource AdminCarrierSettingsGridCarrierId}"
+                                controls:GridViewSort.PropertyName="Carrier"
+                                controls:ProportionalColumn.Width="1" />
+
+                            <GridViewColumn
+                                DisplayMemberBinding="{Binding CarrierDescription}"
+                                Header="{DynamicResource AdminCarrierSettingsGridCarrierDescription}"
+                                controls:GridViewSort.PropertyName="GPShipmentId"
+                                controls:ProportionalColumn.Width="2" />
+
+                            <GridViewColumn
+                                Width="70"
+                                Header="{DynamicResource ReportsExclusionsGridView}">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button
+                                            Style="{StaticResource BorderLessButton}"
+                                            Height="25"
+                                            Width="25"
+                                            BorderBrush="{StaticResource PanelBackground}"
+                                            CommandParameter="{Binding}"
+                                            Command="{Binding DataContext.ViewRecordCommand,ElementName=ListViewShipments}"
+                                            Margin="0,0,5,0"
+                                            VerticalAlignment="Center">
+                                            <Button.Content>
+                                                <Rectangle
+                                                    Width="18"
+                                                    Height="18"
+                                                    Fill="{StaticResource BlackBrush}"
+                                                    HorizontalAlignment="Left">
+                                                    <Rectangle.OpacityMask>
+                                                        <VisualBrush
+                                                            Stretch="Uniform"
+                                                            Visual="{DynamicResource View}" />
+                                                    </Rectangle.OpacityMask>
+                                                </Rectangle>
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </Grid>
+        <Popup
+            Grid.Row="0"
+            StaysOpen="True"
+            Placement="Center"
+            Width="600"
+            Height="Auto"
+            PopupAnimation="Fade"
+            Panel.ZIndex="90"
+            IsOpen="{Binding ShowPopup, NotifyOnSourceUpdated=True}">
+            <Border
+                BorderBrush="{StaticResource BorderBrush}"
+                BorderThickness="1"
+                Background="{StaticResource PanelBackground}">
+                <Grid
+                    Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="{StaticResource AdminCarrierSettingsFormHeading}"
+                        Style="{StaticResource PanelHeader}" />
+                    <Button
+                        Grid.Row="0"
+                        Width="25"
+                        Margin="0,5,5,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Command="{Binding ClosePopupCommand}"
+                        Style="{StaticResource BorderLessButton}">
+                        <Rectangle
+                            Width="18"
+                            Height="18"
+                            Fill="{StaticResource BlackBrush}">
+                            <Rectangle.OpacityMask>
+                                <VisualBrush
+                                    Stretch="Uniform"
+                                    Visual="{DynamicResource close}" />
+                            </Rectangle.OpacityMask>
+                        </Rectangle>
+                    </Button>
+                    <Grid
+                        Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackPanel
+                            Grid.Column="0">
+                            <TextBlock
+                                Text="{DynamicResource AdminCarrierSettingsFormCarrier}"
+                                Style="{StaticResource TextBlockLeft}" />
+                            <TextBox
+                                Width="200"
+                                Text="{Binding Carrier.CarrierCode, Mode=TwoWay}" />
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Row="0"
+                            Grid.Column="1">
+                            <TextBlock
+                                Text="{DynamicResource AdminCarrierSettingsFormCarrierDescription}"
+                                Style="{StaticResource TextBlockLeft}" />
+                            <TextBox
+                                Width="200"
+                                Text="{Binding Carrier.CarrierDescription, Mode=TwoWay}" />
+                        </StackPanel>
+
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Center"
+                            Text="{Binding ValidationMessage,Mode=OneWay}"
+                            Foreground="Red" />
+                        <Button
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Content="{StaticResource ButtonSave}"
+                            Command="{Binding SaveCarrierCommand}"
+                            Width="100"
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource FormButton}" />
+                    </Grid>
+                </Grid>
+            </Border>
+        </Popup>
+    </Grid>
+</UserControl>

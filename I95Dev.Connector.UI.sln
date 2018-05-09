@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I95Dev.Connector.UI", "I95Dev.Connector.UI\I95Dev.Connector.UI.csproj", "{F00AD314-CDE5-41E9-B9E6-DDF5F51EC40E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I95Dev.Connector.UI.Base", "I95Dev.Connector.UI.Base\I95Dev.Connector.UI.Base.csproj", "{F7F82FF0-C630-4B4D-A1D0-FD19FAED3397}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A5B95CB6-BB76-4C4F-B2F6-01273A5E1E59}"
+	ProjectSection(SolutionItems) = preProject
+		Fxcop.FxCop = Fxcop.FxCop
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F00AD314-CDE5-41E9-B9E6-DDF5F51EC40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00AD314-CDE5-41E9-B9E6-DDF5F51EC40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00AD314-CDE5-41E9-B9E6-DDF5F51EC40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00AD314-CDE5-41E9-B9E6-DDF5F51EC40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F82FF0-C630-4B4D-A1D0-FD19FAED3397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F82FF0-C630-4B4D-A1D0-FD19FAED3397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F82FF0-C630-4B4D-A1D0-FD19FAED3397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F82FF0-C630-4B4D-A1D0-FD19FAED3397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64154D19-8FB8-4C9C-86FF-F4814DC19F43}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="I95Dev.Connector.UI.Views.Reports.ReportView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:reports="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Reports;assembly=I95Dev.Connector.UI.Base"
+    xmlns:reports1="clr-namespace:I95Dev.Connector.UI.Views.Reports"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="900"
+    d:DataContext="{d:DesignInstance reports:ReportViewModel}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Text="{DynamicResource ReportsNotificationHeading}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+        <TabControl
+            Grid.Row="1"
+            Margin="0,10,0,5"
+            HorizontalAlignment="Stretch"
+            SelectedIndex="{Binding SelectedTab,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+            Background="Transparent">
+            <TabItem
+                Header="{DynamicResource ReportsNotifications}">
+                <reports1:NotificationsView
+                    DataContext="{Binding Notifications}" />
+            </TabItem>
+            <TabItem
+                Header="{StaticResource ReportsExclusions}">
+                <reports1:ExclusionsView
+                    DataContext="{Binding Exclusions}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

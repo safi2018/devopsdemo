@@ -1,0 +1,2117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <Target Name="$(ProjectDir)/build/I95Dev.Connector.UI.Base.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/build/I95DevGPConnector.exe" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="I95Dev.Connector.UI.Base.DataAccess">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.DataAccess</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.Helpers.Commands">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.Helpers.Commands</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.Helpers.Mvvm">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.Helpers.Mvvm</Item>
+      </Issue>
+     </Message>
+     <Message Id="Mvvm" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue Name="Namespace">
+       <Item>Mvvm</Item>
+       <Item>I95Dev.Connector.UI.Base.Helpers.Mvvm</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.Services">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.Services</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.Services.Validations">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.Services.Validations</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Admin">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Admin</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Base">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Base</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Dashboard.Ecommerce">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Dashboard.Ecommerce</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Dashboard.Erp">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Dashboard.Erp</Item>
+      </Issue>
+     </Message>
+     <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue Name="Namespace">
+       <Item>Erp</Item>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Dashboard.Erp</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.LogFile">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.LogFile</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Schedulers">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 13:47:09Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Schedulers</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Share">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Excluded" Created="2018-03-09 14:23:06Z">
+      <Issue>
+       <Item>I95Dev.Connector.UI.Base.ViewModels.Share</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/build/I95Dev.Connector.UI.Base.dll">
+    <Modules>
+     <Module Name="i95dev.connector.ui.base.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Excluded" Created="2018-03-12 12:09:37Z">
+        <Issue Name="NoStrongName">
+         <Item>'I95Dev.Connector.UI.Base.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="I95Dev.Connector.UI.Base.DataAccess">
+        <Types>
+         <Type Name="IReportService">
+          <Members>
+           <Member Name="#GetCategories()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Certainty="50">
+               <Item>'IReportService.GetCategories()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ISqlService">
+          <Members>
+           <Member Name="#GetErpMessages(I95Dev.Connector.UI.Base.ViewModels.Helpers.MessageSearchModel)">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ISqlService.GetErpMessages(MessageSearchModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetErpMessageSummary(I95Dev.Connector.UI.Base.ViewModels.Helpers.MessageSearchModel)">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ISqlService.GetErpMessageSummary(MessageSearchModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetErpOrderValue(I95Dev.Connector.UI.Base.ViewModels.Helpers.MessageSearchModel)">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ISqlService.GetErpOrderValue(MessageSearchModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetErpRecordCount(I95Dev.Connector.UI.Base.ViewModels.Helpers.MessageSearchModel)">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ISqlService.GetErpRecordCount(MessageSearchModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetForwardEntities()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Certainty="50">
+               <Item>'ISqlService.GetForwardEntities()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetForwardStatuses()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Certainty="50">
+               <Item>'ISqlService.GetForwardStatuses()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetMagentoOrderValue(I95Dev.Connector.UI.Base.ViewModels.Helpers.MessageSearchModel)">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'ISqlService.GetMagentoOrderValue(MessageSearchModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetReverseEntities()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Certainty="50">
+               <Item>'ISqlService.GetReverseEntities()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetReverseStatuses()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Certainty="50">
+               <Item>'ISqlService.GetReverseStatuses()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.Helpers">
+        <Types>
+         <Type Name="JsonViewerHelper">
+          <Members>
+           <Member Name="#LoadJsonToTreeView(System.Windows.Controls.ItemsControl,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'JsonViewerHelper.LoadJsonToTreeView(ItemsControl, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.Helpers.Controls">
+        <Types>
+         <Type Name="GridViewSort">
+          <Members>
+           <Member Name="#ApplySort(System.ComponentModel.ICollectionView,System.String,System.Windows.Controls.ListView,System.Windows.Controls.GridViewColumnHeader)">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'listView'</Item>
+               <Item>'GridViewSort.ApplySort(ICollectionView, string, ListView, GridViewColumnHeader)'</Item>
+               <Item>'ListView'</Item>
+               <Item>'DependencyObject'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="InputBox">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Excluded" Created="2018-03-12 12:09:37Z">
+            <Issue>
+             <Item>'InputBox'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="LayoutColumn">
+          <Members>
+           <Member Name="#GetColumnWidth(System.Windows.Controls.GridViewColumn,System.Windows.DependencyProperty)">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'column'</Item>
+               <Item>'LayoutColumn.GetColumnWidth(GridViewColumn, DependencyProperty)'</Item>
+               <Item>'GridViewColumn'</Item>
+               <Item>'DependencyObject'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#HasPropertyValue(System.Windows.Controls.GridViewColumn,System.Windows.DependencyProperty)">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'column'</Item>
+               <Item>'LayoutColumn.HasPropertyValue(GridViewColumn, DependencyProperty)'</Item>
+               <Item>'GridViewColumn'</Item>
+               <Item>'DependencyObject'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ListViewLayoutManager">
+          <Members>
+           <Member Name="#FindColumnHeader(System.Windows.DependencyObject,System.Windows.Controls.GridViewColumn)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'GridViewColumnHeader'</Item>
+               <Item>'ListViewLayoutManager.FindColumnHeader(DependencyObject, GridViewColumn)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OnLayoutManagerEnabledChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <Messages>
+             <Message Id="I95Dev.Connector.UI.Base.Helpers.Controls.ListViewLayoutManager" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="ObjectCreation">
+               <Item>'ListViewLayoutManager.OnLayoutManagerEnabledChanged(DependencyObject, DependencyPropertyChangedEventArgs)'</Item>
+               <Item>'ListViewLayoutManager'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RegisterEvents(System.Windows.DependencyObject)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'GridViewColumnHeader'</Item>
+               <Item>'ListViewLayoutManager.RegisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'ScrollViewer'</Item>
+               <Item>'ListViewLayoutManager.RegisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'Thumb'</Item>
+               <Item>'ListViewLayoutManager.RegisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UnregisterEvents(System.Windows.DependencyObject)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'GridViewColumnHeader'</Item>
+               <Item>'ListViewLayoutManager.UnregisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'ScrollViewer'</Item>
+               <Item>'ListViewLayoutManager.UnregisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'childVisual'</Item>
+               <Item>'Thumb'</Item>
+               <Item>'ListViewLayoutManager.UnregisterEvents(DependencyObject)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.Models">
+        <Types>
+         <Type Name="BaseModel">
+          <Members>
+           <Member Name="#SetProperty`1(!!0&amp;,!!0,System.String)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'BaseModel.SetProperty&lt;T&gt;(ref T, T, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Level="CriticalWarning">
+               <Item>'member'</Item>
+              </Issue>
+             </Message>
+             <Message Id="val" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="MemberParameter">
+               <Item>'BaseModel.SetProperty&lt;T&gt;(ref T, T, string)'</Item>
+               <Item>val</Item>
+               <Item>'val'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DiagnosticsModel">
+          <Members>
+           <Member Name="#MagentoPassword">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'DiagnosticsModel.MagentoPassword'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoUrl">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'DiagnosticsModel.MagentoUrl'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsModel.MagentoUrl'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoUserName">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'DiagnosticsModel.MagentoUserName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ServerIp">
+            <Messages>
+             <Message Id="Ip" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Ip</Item>
+               <Item>'DiagnosticsModel.ServerIp'</Item>
+               <Item>IP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MessageReportModel">
+          <Members>
+           <Member Name="#ErpId">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'MessageReportModel.ErpId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PaymentSettingsModel">
+          <Members>
+           <Member Name="#GpPaymentId">
+            <Messages>
+             <Message Id="Gp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Gp</Item>
+               <Item>'PaymentSettingsModel.GpPaymentId'</Item>
+               <Item>GP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GpPaymentName">
+            <Messages>
+             <Message Id="Gp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Gp</Item>
+               <Item>'PaymentSettingsModel.GpPaymentName'</Item>
+               <Item>GP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsErpDefault">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'PaymentSettingsModel.IsErpDefault'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoPaymentName">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'PaymentSettingsModel.MagentoPaymentName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShipmentSettingsModel">
+          <Members>
+           <Member Name="#GpShipmentId">
+            <Messages>
+             <Message Id="Gp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue Name="Member">
+               <Item>Gp</Item>
+               <Item>'ShipmentSettingsModel.GpShipmentId'</Item>
+               <Item>GP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsErpDefault">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ShipmentSettingsModel.IsErpDefault'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoShipmentId">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'ShipmentSettingsModel.MagentoShipmentId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.Services">
+        <Types>
+         <Type Name="DiagnosticsService">
+          <Members>
+           <Member Name="#CheckGPeConnect(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.CheckGPeConnect(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckMagentoConnectorIsRunning(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.CheckMagentoConnectorIsRunning(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckMagentoIsRunning(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.CheckMagentoIsRunning(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckSqlPermission(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.CheckSqlPermission(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckWebServicesRunning(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.CheckWebServicesRunning(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+              <Issue>
+               <Item>'DiagnosticsService.CheckWebServicesRunning(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SaveToDatabase(System.Collections.Generic.IEnumerable`1&lt;I95Dev.Connector.UI.Base.Models.DiagnosticsResponseModel&gt;,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsService.SaveToDatabase(IEnumerable&lt;DiagnosticsResponseModel&gt;, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+              <Issue>
+               <Item>'DiagnosticsService.SaveToDatabase(IEnumerable&lt;DiagnosticsResponseModel&gt;, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ManageSchedulers+NativeMethods">
+          <Members>
+           <Member Name="#HideWindow(System.Boolean,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'ManageSchedulers.NativeMethods.HideWindow(bool, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.Services.Converters">
+        <Types>
+         <Type Name="MultiValueConverterAdapter">
+          <Messages>
+           <Message Id="Multi" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+            <Issue Name="Type">
+             <Item>Multi</Item>
+             <Item>'MultiValueConverterAdapter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Admin">
+        <Types>
+         <Type Name="CategoryMappingViewModel">
+          <Members>
+           <Member Name="#SaveData()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'CategoryMappingViewModel.SaveData()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UpdateData()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'CategoryMappingViewModel.UpdateData()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfigurationViewModel">
+          <Members>
+           <Member Name="#Update()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'ConfigurationViewModel.Update()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DiagnosticsViewModel">
+          <Members>
+           <Member Name="#BindDatabases()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsViewModel.BindDatabases()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDataFromFile()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsViewModel.GetDataFromFile()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SaveDataToFile(I95Dev.Connector.UI.Base.Models.DiagnosticsModel)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'DiagnosticsViewModel.SaveDataToFile(DiagnosticsModel)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Configuration">
+        <Types>
+         <Type Name="ConfigurationSettingsViewModel">
+          <Members>
+           <Member Name="#LoadConfigurations(System.Boolean)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'ConfigurationSettingsViewModel.LoadConfigurations(bool)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotificationViewModel">
+          <Members>
+           <Member Name="#UpdateData()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'NotificationViewModel.UpdateData()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PaymentSettingsViewModel">
+          <Members>
+           <Member Name="#ComboBoxGpPayment">
+            <Messages>
+             <Message Id="Gp" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Gp</Item>
+               <Item>'PaymentSettingsViewModel.ComboBoxGpPayment'</Item>
+               <Item>GP</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsDataValid(I95Dev.Connector.UI.Base.Models.PaymentSettingsModel)">
+            <Messages>
+             <Message Id="paymentSettingsModel" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2018-03-13 10:16:56Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'paymentSettingsModel'</Item>
+               <Item>'PaymentSettingsViewModel.IsDataValid(PaymentSettingsModel)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SavePaymentRecord()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'PaymentSettingsViewModel.SavePaymentRecord()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShipmentSettingsViewModel">
+          <Members>
+           <Member Name="#SaveShipments()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'ShipmentSettingsViewModel.SaveShipments()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShippingCarrierViewModel">
+          <Members>
+           <Member Name="#SaveCarrier()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue>
+               <Item>'ShippingCarrierViewModel.SaveCarrier()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Dashboard">
+        <Types>
+         <Type Name="LastSyncViewModel">
+          <Members>
+           <Member Name="#ErpToMagento">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'LastSyncViewModel.ErpToMagento'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'LastSyncViewModel.ErpToMagento'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoToErp">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'LastSyncViewModel.MagentoToErp'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'LastSyncViewModel.MagentoToErp'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RecordSummaryViewModel">
+          <Members>
+           <Member Name="#ErpOrderValue">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'RecordSummaryViewModel.ErpOrderValue'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ErpToMagentoCount">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'RecordSummaryViewModel.ErpToMagentoCount'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'RecordSummaryViewModel.ErpToMagentoCount'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoOrderValue">
+            <Messages>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'RecordSummaryViewModel.MagentoOrderValue'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MagentoToErpCount">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'RecordSummaryViewModel.MagentoToErpCount'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Magento" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Magento</Item>
+               <Item>'RecordSummaryViewModel.MagentoToErpCount'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Dashboard.Erp">
+        <Types>
+         <Type Name="ErpDashboardViewModel">
+          <Messages>
+           <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+            <Issue Name="Type">
+             <Item>Erp</Item>
+             <Item>'ErpDashboardViewModel'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ErpReportViewModel">
+          <Messages>
+           <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+            <Issue Name="Type">
+             <Item>Erp</Item>
+             <Item>'ErpReportViewModel'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ErpViewModel">
+          <Messages>
+           <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+            <Issue Name="Type">
+             <Item>Erp</Item>
+             <Item>'ErpViewModel'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Helpers">
+        <Types>
+         <Type Name="MessageSearchModel">
+          <Members>
+           <Member Name="#ErpId">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'MessageSearchModel.ErpId'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShippingMethodSearchModel">
+          <Members>
+           <Member Name="#ErpShippingMethod">
+            <Messages>
+             <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue Name="Member">
+               <Item>Erp</Item>
+               <Item>'ShippingMethodSearchModel.ErpShippingMethod'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.LogFile">
+        <Types>
+         <Type Name="LogFileViewModel">
+          <Members>
+           <Member Name="#LoadLogFiles()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'LogFileViewModel.LoadLogFiles()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Reports">
+        <Types>
+         <Type Name="NotificationViewModel">
+          <Members>
+           <Member Name="#.ctor(System.Boolean)">
+            <Messages>
+             <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'NotificationViewModel.NotificationViewModel(bool)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Base.ViewModels.Schedulers">
+        <Types>
+         <Type Name="SchedulersViewModel">
+          <Members>
+           <Member Name="#DeleteAllSchedulers()">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'SchedulersViewModel.DeleteAllSchedulers()'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SchedulerViewModel">
+          <Members>
+           <Member Name="#CheckFolder(Microsoft.Win32.TaskScheduler.TaskFolder)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'SchedulerViewModel.CheckFolder(TaskFolder)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CreateScheduler(I95Dev.Connector.UI.Base.Models.SchedulerModel,System.Boolean)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'SchedulerViewModel.CreateScheduler(SchedulerModel, bool)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetFilePermission(System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-12 12:09:37Z">
+              <Issue>
+               <Item>'SchedulerViewModel.SetFilePermission(string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+      <Resources>
+       <Resource Name="I95Dev.Connector.UI.Base.Resources.Messages.LogMessages.resources">
+        <Messages>
+         <Message Id="Erp" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Excluded" Created="2018-03-12 12:09:37Z">
+          <Issue Name="StringResource">
+           <Item>'I95Dev.Connector.UI.Base.Resources.Messages.LogMessages.resx'</Item>
+           <Item>GetErpMessages</Item>
+           <Item>Erp</Item>
+           <Item>GetErpMessages</Item>
+          </Issue>
+          <Issue Name="StringResource">
+           <Item>'I95Dev.Connector.UI.Base.Resources.Messages.LogMessages.resx'</Item>
+           <Item>GetErpOrderValue</Item>
+           <Item>Erp</Item>
+           <Item>GetErpOrderValue</Item>
+          </Issue>
+          <Issue Name="StringResource">
+           <Item>'I95Dev.Connector.UI.Base.Resources.Messages.LogMessages.resx'</Item>
+           <Item>GetErpRecordCount</Item>
+           <Item>Erp</Item>
+           <Item>GetErpRecordCount</Item>
+          </Issue>
+         </Message>
+         <Message Id="Magento" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Excluded" Created="2018-03-12 12:09:37Z">
+          <Issue Name="StringResource">
+           <Item>'I95Dev.Connector.UI.Base.Resources.Messages.LogMessages.resx'</Item>
+           <Item>GetMagentoOrderValue</Item>
+           <Item>Magento</Item>
+           <Item>GetMagentoOrderValue</Item>
+          </Issue>
+         </Message>
+        </Messages>
+       </Resource>
+      </Resources>
+     </Module>
+    </Modules>
+   </Target>
+   <Target Name="$(ProjectDir)/build/I95DevGPConnector.exe">
+    <Modules>
+     <Module Name="i95devgpconnector.exe">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Excluded" Created="2018-03-09 13:47:09Z">
+        <Issue Name="NoStrongName">
+         <Item>'I95DevGPConnector.exe'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="I95Dev.Connector.UI">
+        <Types>
+         <Type Name="App">
+          <Members>
+           <Member Name="#Application_Startup(System.Object,System.Windows.StartupEventArgs)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'App.Application_Startup(object, StartupEventArgs)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ShowUnhandledException(System.Windows.Threading.DispatcherUnhandledExceptionEventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'App.ShowUnhandledException(DispatcherUnhandledExceptionEventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Home">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'Home'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Controls">
+        <Types>
+         <Type Name="DateTimePicker">
+          <Members>
+           <Member Name="#CalendarPopup">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'DateTimePicker.CalendarPopup'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Increase(System.Int32,System.Int32)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'DateTimePicker.Increase(int, int)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'DateTimePicker'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UserControl">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'DateTimePicker.UserControl'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FooterPager">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'FooterPager'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Pager">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'Pager'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TextBoxUpDownAdorner">
+          <Members>
+           <Member Name="#Clicked" Kind="Event">
+            <Messages>
+             <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue Name="Second">
+               <Item>'TextBoxUpDownAdorner.ClickedEventHandler'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TextBoxUpDownAdorner+ClickedEventHandler">
+          <Messages>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Excluded" Created="2018-03-09 13:47:09Z">
+            <Issue>
+             <Item>'TextBoxUpDownAdorner.ClickedEventHandler'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Admin">
+        <Types>
+         <Type Name="CategoryMappingView">
+          <Members>
+           <Member Name="#DataGridCategoryMapping">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'CategoryMappingView.DataGridCategoryMapping'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'CategoryMappingView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UserControl">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'CategoryMappingView.UserControl'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CategoryMasterView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'CategoryMasterView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConfigurationView">
+          <Members>
+           <Member Name="#CheckBoxEntity">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationView.CheckBoxEntity'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckBoxLog">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationView.CheckBoxLog'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckBoxScheduler">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationView.CheckBoxScheduler'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RadioButton">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationView.RadioButton'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CheckBox'</Item>
+               <Item>'ConfigurationView.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CheckBox'</Item>
+               <Item>'ConfigurationView.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DiagnosticsView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'DiagnosticsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Configuration">
+        <Types>
+         <Type Name="ConfigurationSettingsView">
+          <Members>
+           <Member Name="#MainGrid">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationSettingsView.MainGrid'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ConfigurationSettingsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotificationsView">
+          <Members>
+           <Member Name="#GridMain">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView.GridMain'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RadioButton">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView.RadioButton'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PaymentSettingsView">
+          <Members>
+           <Member Name="#ListViewMappings">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-12 08:33:44Z">
+              <Issue>
+               <Item>'PaymentSettingsView.ListViewMappings'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'PaymentSettingsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShipmentSettingsView">
+          <Members>
+           <Member Name="#ListViewShipments">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue>
+               <Item>'ShipmentSettingsView.ListViewShipments'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ShipmentSettingsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ShippingCarriersView">
+          <Members>
+           <Member Name="#ListViewShipments">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue>
+               <Item>'ShippingCarriersView.ListViewShipments'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-13 10:16:56Z">
+              <Issue>
+               <Item>'ShippingCarriersView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Dashboard">
+        <Types>
+         <Type Name="EcommerceView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'EcommerceView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TabItem'</Item>
+               <Item>'EcommerceView.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'EcommerceView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TabPageReport">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'EcommerceView.TabPageReport'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TabPageSummary">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'EcommerceView.TabPageSummary'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ErpView">
+          <Messages>
+           <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-09 13:47:09Z">
+            <Issue Name="Type">
+             <Item>Erp</Item>
+             <Item>'ErpView'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ErpView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TabItem'</Item>
+               <Item>'ErpView.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ErpView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TabPageReport">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ErpView.TabPageReport'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TabPageSummary">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ErpView.TabPageSummary'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StartupView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-12 07:25:11Z">
+              <Issue>
+               <Item>'StartupView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-12 07:25:11Z">
+              <Issue>
+               <Item>'StartupView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Dashboard.UserControls">
+        <Types>
+         <Type Name="EcommerceSummary">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'EcommerceSummary'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ErpSummary">
+          <Messages>
+           <Message Id="Erp" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Excluded" Created="2018-03-09 13:47:09Z">
+            <Issue Name="Type">
+             <Item>Erp</Item>
+             <Item>'ErpSummary'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ErpSummary'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LastSync">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'LastSync'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Licensing">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'Licensing'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="RecordsSummary">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'RecordsSummary'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TodayAlerts">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'TodayAlerts'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.LogFile">
+        <Types>
+         <Type Name="LogFilesView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'LogFilesView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'LogFilesView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UserControl">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'LogFilesView.UserControl'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Reports">
+        <Types>
+         <Type Name="ExclusionDetailsView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ExclusionDetailsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ExclusionsView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ExclusionsView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ListViewExclusions">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ExclusionsView.ListViewExclusions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ExclusionsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotificationDetailsView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationDetailsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotificationsView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DataGridNotifications">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView.DataGridNotifications'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'NotificationsView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ReportView">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ReportView._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'ReportView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Schedulers">
+        <Types>
+         <Type Name="SchedulersView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 13:47:09Z">
+              <Issue>
+               <Item>'SchedulersView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="I95Dev.Connector.UI.Views.Share">
+        <Types>
+         <Type Name="AuthenticationView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 14:23:06Z">
+              <Issue>
+               <Item>'AuthenticationView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Blank">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 14:23:06Z">
+              <Issue>
+               <Item>'Blank'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotificationView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 14:23:06Z">
+              <Issue>
+               <Item>'NotificationView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PasswordView">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Status="Excluded" Created="2018-03-09 14:23:06Z">
+              <Issue>
+               <Item>'PasswordView'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+    <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+    <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   </Rule>
+   <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+    <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   </Rule>
+   <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+    <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Local">{0}, a variable, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+    <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+    <Resolution Name="ObjectCreation">{0} creates a new instance of {1} which is never used. Pass the instance as an argument to another method, assign the instance to a variable, or remove the object creation if it is unnecessary.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+    <Resolution Name="Default">Consider a design that does not require that {0} be a reference parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+    <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   </Rule>
+   <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+    <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   </Rule>
+   <Rule TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703">
+    <Resolution Name="StringResource">In resource {0}, referenced by name '{1}', correct the spelling of '{2}' in string value '{3}'.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056">
+    <Resolution Name="Default">Change the type of property {0} from string to System.Uri.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

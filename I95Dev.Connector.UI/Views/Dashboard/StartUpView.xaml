@@ -1,0 +1,82 @@
+﻿<UserControl
+    x:Class="I95Dev.Connector.UI.Views.Dashboard.StartupView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dashboard="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Dashboard;assembly=I95Dev.Connector.UI.Base"
+    xmlns:userControls="clr-namespace:I95Dev.Connector.UI.Views.Dashboard.UserControls"
+    mc:Ignorable="d"
+    d:DesignHeight="750"
+    d:DesignWidth="1024"
+    d:DataContext="{d:DesignInstance dashboard:StartupViewModel}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource PageHeadingHeight}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.ColumnSpan="3"
+            Grid.Row="0"
+            Text="{StaticResource MyDashboard}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+
+        <Grid
+            Grid.Column="0"
+            Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <userControls:EcommerceSummary
+                Grid.Row="0"
+                Margin="5"
+                DataContext="{Binding M2SSummaryModel}" />
+            <userControls:ErpSummary
+                Grid.Row="1"
+                Margin="5"
+                DataContext="{Binding A2MSummaryModel}" />
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <userControls:RecordsSummary
+                Grid.Row="0"
+                Margin="5"
+                DataContext="{Binding RecordsAndOrdersCount}" />
+            <userControls:Licensing
+                Grid.Row="1"
+                Margin="5"
+                DataContext="{Binding LicenseData}" />
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.75*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+            <userControls:LastSync
+                Grid.Row="0"
+                Margin="5"
+                DataContext="{Binding LastSyncTime}" />
+            <userControls:TodayAlerts
+                Grid.Row="1"
+                Margin="5"
+                DataContext="{Binding NotificationsData}" />
+        </Grid>
+    </Grid>
+</UserControl>

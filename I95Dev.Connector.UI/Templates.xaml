@@ -1,0 +1,88 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dashboard="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Dashboard;assembly=I95Dev.Connector.UI.Base"
+    xmlns:ecommerceViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Dashboard.Ecommerce;assembly=I95Dev.Connector.UI.Base"
+    xmlns:erpViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Dashboard.Erp;assembly=I95Dev.Connector.UI.Base"
+    xmlns:configViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Configuration;assembly=I95Dev.Connector.UI.Base"
+    xmlns:schedulerViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Schedulers;assembly=I95Dev.Connector.UI.Base"
+    xmlns:logsViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.LogFile;assembly=I95Dev.Connector.UI.Base"
+    xmlns:adminViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Admin;assembly=I95Dev.Connector.UI.Base"
+    xmlns:reportViewModel="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Reports;assembly=I95Dev.Connector.UI.Base"
+    xmlns:dashboardView="clr-namespace:I95Dev.Connector.UI.Views.Dashboard"
+    xmlns:configuration="clr-namespace:I95Dev.Connector.UI.Views.Configuration"
+    xmlns:schedulers="clr-namespace:I95Dev.Connector.UI.Views.Schedulers"
+    xmlns:logFile="clr-namespace:I95Dev.Connector.UI.Views.LogFile"
+    xmlns:admin="clr-namespace:I95Dev.Connector.UI.Views.Admin"
+    xmlns:reports="clr-namespace:I95Dev.Connector.UI.Views.Reports"
+    xmlns:share="clr-namespace:I95Dev.Connector.UI.Views.Share"
+    xmlns:sharedViewModels="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Share;assembly=I95Dev.Connector.UI.Base">
+
+    <DataTemplate DataType="{x:Type dashboard:StartupViewModel}">
+        <dashboardView:StartupView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ecommerceViewModel:EcommerceViewModel}">
+        <dashboardView:EcommerceView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type erpViewModel:ErpViewModel}">
+        <dashboardView:ErpView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:ConfigurationSettingsViewModel}">
+        <configuration:ConfigurationSettingsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:ShipmentSettingsViewModel}">
+        <configuration:ShipmentSettingsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:PaymentSettingsViewModel}">
+        <configuration:PaymentSettingsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:NotificationViewModel}">
+        <configuration:NotificationsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type schedulerViewModel:SchedulersViewModel}">
+        <schedulers:SchedulersView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type logsViewModel:LogFileViewModel}">
+        <logFile:LogFilesView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type adminViewModel:CategoryMasterViewModel}">
+        <admin:CategoryMasterView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type adminViewModel:ConfigurationViewModel}">
+        <admin:ConfigurationView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type adminViewModel:CategoryMappingViewModel}">
+        <admin:CategoryMappingView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type reportViewModel:ReportViewModel}">
+        <reports:ReportView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type sharedViewModels:BlankViewModel}">
+        <share:Blank />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type adminViewModel:DiagnosticsViewModel}">
+        <admin:DiagnosticsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:ShippingCarrierViewModel}">
+        <configuration:ShippingCarriersView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type configViewModel:DocumentTypesViewModel}">
+        <configuration:DocumentTypesView />
+    </DataTemplate>
+</ResourceDictionary>

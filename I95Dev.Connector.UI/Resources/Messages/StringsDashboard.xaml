@@ -1,0 +1,120 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="MyDashboard" xml:space="preserve">MY DASHBOARD</system:String>
+
+    <system:String x:Key="EcommerceDashboardSummary">SUMMARY</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryHeading">MAGENTO TO ERP</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGbHeading">Summary by duration</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryFromDate" xml:space="preserve"> From Date</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryToDate" xml:space="preserve"> To Date </system:String>
+    <system:String x:Key="EcommerceDashboardSummaryButtonSubmit">SHOW RESULTS</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridEntity">ENTITY</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridProcessing">PROCESSING</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridError">ERROR</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridSuccess">SUCCESS</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridComplete">COMPLETE</system:String>
+    <system:String x:Key="EcommerceDashboardSummaryGridTotalByEntity">TOTAL BY ENTITY</system:String>
+
+    <system:String x:Key="EcommerceDashboardReport">REPORT</system:String>
+    <system:String x:Key="EcommerceDashboardReportHeader">CLOUD TO ERP</system:String>
+    <system:String x:Key="EcommerceDashboardReportGbFindByData">FIND BY DATA</system:String>
+    <system:String x:Key="EcommerceDashboardReportEntityType" xml:space="preserve"> Entity Type </system:String>
+    <system:String x:Key="EcommerceDashboardReportMagentoId" xml:space="preserve"> Magento ID </system:String>
+    <system:String x:Key="EcommerceDashboardReportErpId" xml:space="preserve"> ERP ID </system:String>
+    <system:String x:Key="EcommerceDashboardReportReference" xml:space="preserve"> Reference ID </system:String>
+    <system:String x:Key="EcommerceDashboardReportGbFindByMessageData">FIND BY MESSAGE</system:String>
+    <system:String x:Key="EcommerceDashboardReportId" xml:space="preserve">ID </system:String>
+    <system:String x:Key="EcommerceDashboardReportStatus" xml:space="preserve">Status </system:String>
+    <system:String x:Key="EcommerceDashboardReportCounter" xml:space="preserve">Sync Count</system:String>
+    <system:String x:Key="EcommerceDashboardReportCreated" xml:space="preserve">REPORT CREATED</system:String>
+    <system:String x:Key="EcommerceDashboardReportCreatedFrom" xml:space="preserve">  From </system:String>
+    <system:String x:Key="EcommerceDashboardReportCreatedTo" xml:space="preserve">  To  </system:String>
+    <system:String x:Key="EcommerceDashboardReportUpdated" xml:space="preserve">REPORT UPDATED</system:String>
+    <system:String x:Key="EcommerceDashboardReportUpdatedFrom" xml:space="preserve"> From  </system:String>
+    <system:String x:Key="EcommerceDashboardReportUpdatedTo" xml:space="preserve">  To </system:String>
+    <system:String x:Key="EcommerceDashboardReportButtonReset">RESET</system:String>
+    <system:String x:Key="EcommerceDashboardReportButtonFind">SHOW RESULTS</system:String>
+    <system:String x:Key="EcommerceDashboardReportAction" xml:space="preserve">Action  </system:String>
+    <system:String x:Key="EcommerceDashboardReportGridMessageId">MESSAGE ID</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridEcommerceId">ECOMMERCE ID</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridReference">REFERENCE</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridCreatedDate">CREATED DATE</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridUpdatedDate">UPDATED DATE</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridStatus">STATUS</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridCounter">SYNC COUNT</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridResponse">ERP RESPONSE</system:String>
+    <system:String x:Key="EcommerceDashboardReportGridAction">ACTION</system:String>
+    <system:String x:Key="EcommerceDashboardReportActionSubmit">Submit</system:String>
+
+    <system:String x:Key="ErpDashboardSummary">SUMMARY</system:String>
+    <system:String x:Key="ErpDashboardSummaryHeading">Epr to Cloud Sync Summary</system:String>
+    <system:String x:Key="ErpDashboardSummaryGbHeading">Summary by duration</system:String>
+    <system:String x:Key="ErpDashboardSummaryFromDate" xml:space="preserve"> From Date </system:String>
+    <system:String x:Key="ErpDashboardSummaryToDate" xml:space="preserve"> To Date  </system:String>
+    <system:String x:Key="ErpDashboardSummaryButtonSubmit">SHOW RESULTS</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridEntity">ENTITY</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridReceive">RECEIVE PENDING</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridPending">TRANSFER PENDING</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridTransferred">REQUEST TRANSFERED</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridProcessing">PROCESSING</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridError">ERROR</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridSuccess">RESPONSE RECEIVED</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridComplete">COMPLETE</system:String>
+    <system:String x:Key="ErpDashboardSummaryGridTotalByEntity">TOTAL BY ENTITY</system:String>
+
+    <system:String x:Key="ErpDashboardReport">REPORT</system:String>
+    <system:String x:Key="ErpDashboardReportHeader">ERP TO MAGENTO</system:String>
+    <system:String x:Key="ErpDashboardReportGbFindByData">FIND BY DATA</system:String>
+    <system:String x:Key="ErpDashboardReportEntityType" xml:space="preserve"> Entity Type</system:String>
+    <system:String x:Key="ErpDashboardReportMagentoId" xml:space="preserve"> Magento ID </system:String>
+    <system:String x:Key="ErpDashboardReportErpId" xml:space="preserve"> ERP ID </system:String>
+    <system:String x:Key="ErpDashboardReportReference" xml:space="preserve"> Reference ID </system:String>
+    <system:String x:Key="ErpDashboardReportGbFindByMessageData">FIND BY MESSAGE</system:String>
+    <system:String x:Key="ErpDashboardReportId" xml:space="preserve"> ID  </system:String>
+    <system:String x:Key="ErpDashboardReportStatus" xml:space="preserve"> Status  </system:String>
+    <system:String x:Key="ErpDashboardReportCounter" xml:space="preserve">Sync Count </system:String>
+    <system:String x:Key="ErpDashboardReportCreated" xml:space="preserve">REPORT CREATED</system:String>
+    <system:String x:Key="ErpDashboardReportCreatedFrom" xml:space="preserve">  From  </system:String>
+    <system:String x:Key="ErpDashboardReportCreatedTo" xml:space="preserve">  To  </system:String>
+    <system:String x:Key="ErpDashboardReportUpdated" xml:space="preserve">REPORT UPDATED</system:String>
+    <system:String x:Key="ErpDashboardReportUpdatedFrom" xml:space="preserve"> From  </system:String>
+    <system:String x:Key="ErpDashboardReportUpdatedTo" xml:space="preserve">  To  </system:String>
+    <system:String x:Key="ErpDashboardReportButtonReset">Reset</system:String>
+    <system:String x:Key="ErpDashboardReportButtonFind">Find</system:String>
+    <system:String x:Key="ErpDashboardReportGridMessageId">MESSAGE ID</system:String>
+    <system:String x:Key="ErpDashboardReportGridErpId">ERP ID</system:String>
+    <system:String x:Key="ErpDashboardReportGridRecordTime">RECORD TIME</system:String>
+    <system:String x:Key="ErpDashboardReportGridCreatedDate">CREATED DATE</system:String>
+    <system:String x:Key="ErpDashboardReportGridUpdatedDate">UPDATED DATE</system:String>
+    <system:String x:Key="ErpDashboardReportGridStatus">STATUS</system:String>
+    <system:String x:Key="ErpDashboardReportGridCounter">SYNC COUNT</system:String>
+    <system:String x:Key="ErpDashboardReportGridResponse">CLOUD ID</system:String>
+    <system:String x:Key="ErpDashboardReportGridEcommerce">ECOMMERCE ID</system:String>
+    <system:String x:Key="ErpDashboardReportGridAction">ACTION</system:String>
+    <system:String x:Key="ErpDashboardReportActionSubmit">Submit</system:String>
+    <system:String x:Key="ErpDashboardCheckBox">Get Data from Magento</system:String>
+
+    <system:String x:Key="ErpSummaryHeading" xml:space="preserve">GP To Magento </system:String>
+    <system:String x:Key="EcommerceSummaryHeading" xml:space="preserve">Magento to GP</system:String>
+
+    <system:String x:Key="SummaryHeading" xml:space="preserve">Summary Sync : </system:String>
+    <system:String x:Key="SummaryGridCompleted" xml:space="preserve">Completed</system:String>
+    <system:String x:Key="SummaryGridPending" xml:space="preserve">Processing</system:String>
+    <system:String x:Key="SummaryGridProcessing" xml:space="preserve">Processing</system:String>
+    <system:String x:Key="SummaryGridError" xml:space="preserve">Error</system:String>
+    <system:String x:Key="SummaryButtonView All" xml:space="preserve">View All</system:String>
+
+    <system:String x:Key="LastSyncHeading" xml:space="preserve">Last Sync</system:String>
+    <system:String x:Key="LastSyncMagentoToAx" xml:space="preserve">Magento To GP</system:String>
+    <system:String x:Key="LastSyncAxToMagento" xml:space="preserve">GP To Magento</system:String>
+
+    <system:String x:Key="RecordsValueHeading" xml:space="preserve">Records &amp; Order Value</system:String>
+    <system:String x:Key="RecordsValuePanelHeading1" xml:space="preserve">Magento to GP</system:String>
+    <system:String x:Key="RecordsValuePanelHeading2" xml:space="preserve">GP To Magento </system:String>
+    <system:String x:Key="RecordsValueRecordsSynced" xml:space="preserve">Records Synced </system:String>
+    <system:String x:Key="RecordsValueOrderValue" xml:space="preserve">Order Value</system:String>
+    <system:String x:Key="RecordsValueViewAll" xml:space="preserve">View All</system:String>
+</ResourceDictionary>

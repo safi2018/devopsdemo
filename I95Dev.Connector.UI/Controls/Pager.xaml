@@ -1,0 +1,53 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:converters="clr-namespace:I95Dev.Connector.UI.Base.Services.Converters;assembly=I95Dev.Connector.UI.Base"
+    x:Class="I95Dev.Connector.UI.Controls.Pager"
+    mc:Ignorable="d"
+    Height="45">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converters:IntToStringConverter x:Key="IntToStringConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel
+        Orientation="Horizontal"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Stretch"
+        Background="White">
+        <TextBlock
+            Style="{StaticResource TextBlockLeft}"
+            Text="  Showing" />
+        <ComboBox
+            VerticalAlignment="Center"
+            VerticalContentAlignment="Center"
+            Margin="3,3,0,0"
+            Width="50">
+            <ComboBox.Text>
+                <converters:ConverterBindableBinding
+                    Binding="{Binding RecordsPerPage,FallbackValue=20}"
+                    Converter="{StaticResource IntToStringConverter}"
+                    ConverterParameterBinding="{Binding RecordsPerPage,FallbackValue=20}" />
+            </ComboBox.Text>
+            <ComboBoxItem Content="10" />
+            <ComboBoxItem
+                IsSelected="True"
+                Content="20" />
+            <ComboBoxItem Content="50" />
+            <ComboBoxItem Content="100" />
+        </ComboBox>
+        <TextBlock
+            Style="{StaticResource TextBlockLeft}"
+            Margin="5,0,5,0"
+            Text=" of " />
+        <TextBlock
+            Style="{StaticResource TextBlockLeft}"
+            Text="{Binding TotalRecords}" />
+        <TextBlock
+            Text=" results "
+            Style="{StaticResource TextBlockLeft}"
+            Margin="5 0 0 0" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ShippingMethod>
+  <Carrier id="m2eproshipping" description="M2EPro Shipping">
+    <Service erpShippingId="M2EPROSHIPPING" ecommerceShippingId="m2eproshipping_m2eproshipping" description="m2eproshipping_m2eproshipping"/>
+  </Carrier>
+  <Carrier id="fixed" description="Flat Rate">
+    <Service erpShippingId="FLATRATE_FLATRA" ecommerceShippingId="flatrate_flatrate" description="flatrate_flatrate" isEcommerceDefault="1" isErpDefault="1" />
+  </Carrier>
+  <Carrier id="free" description="Free shipping">
+    <Service description="Free" ecommerceShippingId="freeshipping_freeshipping" erpShippingId="FREE_SHIPPING"> </Service>
+  </Carrier>
+  <Carrier id="storePickup" description="Store pickup">
+    <Service description="Fixed" ecommerceShippingId="storepickup_storepickup" erpShippingId="STOREPICKUP"> </Service>
+  </Carrier>
+  <Carrier id="ups" description="United Parcel Service">
+    <Service erpShippingId="ups_1DM" ecommerceShippingId="ups_1DM" description="Next Day Air Early AM"/>
+    <Service erpShippingId="ups_1DML" ecommerceShippingId="ups_1DML" description="Next Day Air Early AM Letter"/>
+    <Service erpShippingId="ups_1DA" ecommerceShippingId="ups_1DA" description="Next Day Air"/>
+    <Service erpShippingId="ups_1DAL" ecommerceShippingId="ups_1DAL" description="Next Day Air Letter"/>
+    <Service erpShippingId="ups_1DAPI" ecommerceShippingId="ups_1DAPI" description="Next Day Air Intra (Puerto Rico)"/>
+    <Service erpShippingId="ups_1DP" ecommerceShippingId="ups_1DP" description="Next Day Air Saver"/>
+    <Service erpShippingId="ups_1DPL" ecommerceShippingId="ups_1DPL" description="Next Day Air Saver Letter"/>
+    <Service erpShippingId="ups_2DM" ecommerceShippingId="ups_2DM" description="2nd Day Air AM"/>
+    <Service erpShippingId="ups_2DML" ecommerceShippingId="ups_2DML" description="2nd Day Air AM Letter"/>
+    <Service erpShippingId="ups_2DA" ecommerceShippingId="ups_2DA" description="2nd Day Air"/>
+    <Service erpShippingId="ups_2DAL" ecommerceShippingId="ups_2DAL" description="2nd Day Air Letter"/>
+    <Service erpShippingId="ups_3DS" ecommerceShippingId="ups_3DS" description="3 Day Select"/>
+    <Service erpShippingId="ups_GND" ecommerceShippingId="ups_GND" description="Ground"/>
+    <Service erpShippingId="ups_GNDCOM" ecommerceShippingId="ups_GNDCOM" description="Ground Commercial"/>
+    <Service erpShippingId="ups_GNDRES" ecommerceShippingId="ups_GNDRES" description="Ground Residential"/>
+    <Service erpShippingId="ups_STD" ecommerceShippingId="ups_STD" description="Canada Standard"/>
+    <Service erpShippingId="ups_XPR" ecommerceShippingId="ups_XPR" description="Worldwide Express"/>
+    <Service erpShippingId="ups_WXS" ecommerceShippingId="ups_WXS" description="Worldwide Express Saver"/>
+    <Service erpShippingId="ups_XPRL" ecommerceShippingId="ups_XPRL" description="Worldwide Express Letter"/>
+    <Service erpShippingId="ups_XDM" ecommerceShippingId="ups_XDM" description="Worldwide Express Plus"/>
+    <Service erpShippingId="ups_XDML" ecommerceShippingId="ups_XDML" description="Worldwide Express Plus Letter"/>
+    <Service erpShippingId="ups_XPD" ecommerceShippingId="ups_XPD" description="Worldwide Expedited"/>
+  </Carrier>
+  <Carrier id="usps" description="United States Postal Service">
+    <Service erpShippingId="usps_BPM" ecommerceShippingId="usps_Bound Printed Matter" description="Bound Printed Matter"/>
+    <Service erpShippingId="usps_EXPMAIL" ecommerceShippingId="usps_Express Mail" description="Express Mail"/>
+    <Service erpShippingId="usps_EXPMFRE" ecommerceShippingId="usps_62" description="Express Mail Flat Rate Envelope"/>
+    <Service erpShippingId="usps_EXPMFREHP" ecommerceShippingId="usps_63" description="Express Mail Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_EXPMFRESHG" ecommerceShippingId="usps_64" description="Express Mail Flat-Rate Envelope Sunday/Holiday Guarantee"/>
+    <Service erpShippingId="usps_EXPMHP" ecommerceShippingId="usps_27" description="Priority Mail Express Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_EXPMI" ecommerceShippingId="usps_INT_1" description="Express Mail International"/>
+    <Service erpShippingId="usps_EXPMIFRE" ecommerceShippingId="usps_INT_10" description="Express Mail International Flat Rate Envelope"/>
+    <Service erpShippingId="usps_EXPMPOPO" ecommerceShippingId="usps_Express Mail PO to PO" description="Express Mail PO to PO"/>
+    <Service erpShippingId="usps_EXPMSHG" ecommerceShippingId="usps_Express Mail Sunday/Holiday Guarantee" description="Express Mail Sunday/Holiday Guarantee"/>
+    <Service erpShippingId="usps_FCMILE" ecommerceShippingId="usps_First-Class Mail International Large Envelope" description="First-Class Mail International Large Envelope"/>
+    <Service erpShippingId="usps_FCMIL" ecommerceShippingId=" usps_INT_14" description="First-Class Mail International Letters"/>
+    <Service erpShippingId="usps_FCMIP" ecommerceShippingId="usps_INT_15" description="First-Class Mail International Package"/>
+    <Service erpShippingId="usps_FC" ecommerceShippingId="usps_61" description="First-Class Package Service"/>
+    <Service erpShippingId="usps_FCM" ecommerceShippingId="usps_First-Class Mail" description="First-Class Mail"/>
+    <Service erpShippingId="usps_FCMF" ecommerceShippingId="usps_First-Class Mail Flat" description="First-Class Mail Flat"/>
+    <Service erpShippingId="usps_FCMLE" ecommerceShippingId="usps_0_FCLE" description="First-Class Mail Large Envelope"/>
+    <Service erpShippingId="usps_FCMI" ecommerceShippingId="usps_INT_13" description="First-Class Mail International"/>
+    <Service erpShippingId="usps_FCML" ecommerceShippingId="usps_0_FCL" description="First-Class Mail Letter"/>
+    <Service erpShippingId="usps_FCMP" ecommerceShippingId="usps_0_FCP" description="First-Class Mail Parcel"/>
+    <Service erpShippingId="usps_FCMPK" ecommerceShippingId="usps_First-Class Mail Package" description="First-Class Mail Package"/>
+    <Service erpShippingId="usps_GXG" ecommerceShippingId="usps_INT_4" description="Global Express Guaranteed (GXG)"/>
+    <Service erpShippingId="usps_GXGNDNR" ecommerceShippingId="usps_INT_7" description="Global Express Guaranteed Non-Document Non-Rectangular"/>
+    <Service erpShippingId="usps_GEGNDR" ecommerceShippingId="usps_INT_6" description="Global Express Guaranteed Non-Document Rectangular"/>
+    <Service erpShippingId="usps_LM" ecommerceShippingId="usps_7" description="Library Mail Parcel"/>
+    <Service erpShippingId="usps_MM" ecommerceShippingId="usps_6" description="Media Mail Parcel"/>
+    <Service erpShippingId="usps_PP" ecommerceShippingId="usps_4" description="Standard Post"/>
+    <Service erpShippingId="usps_PMAIL" ecommerceShippingId="usps_1" description="Priority Mail"/>
+    <Service erpShippingId="usps_PMSFRB" ecommerceShippingId="usps_28" description="Priority Mail Small Flat Rate Box"/>
+    <Service erpShippingId="usps_PMMFRB" ecommerceShippingId="usps_17" description="Priority Mail Medium Flat Rate Box"/>
+    <Service erpShippingId="usps_PMLFRB" ecommerceShippingId="usps_22" description="Priority Mail Large Flat Rate Box"/>
+    <Service erpShippingId="usps_PMFRB" ecommerceShippingId="usps_Priority Mail Flat Rate Box" description="Priority Mail Flat Rate Box"/>
+    <Service erpShippingId="usps_PMFRE" ecommerceShippingId="usps_16" description="Priority Mail Flat Rate Envelope"/>
+    <Service erpShippingId="usps_PMI" ecommerceShippingId="usps_INT_2" description="Priority Mail International"/>
+    <Service erpShippingId="usps_PMIFRB" ecommerceShippingId="usps_INT_9" description="Priority Mail International Flat Rate Box"/>
+    <Service erpShippingId="usps_PMIFRE" ecommerceShippingId="usps_INT_8" description="Priority Mail International Flat Rate Envelope"/>
+    <Service erpShippingId="usps_PMISFRB" ecommerceShippingId="usps_INT_16" description="Priority Mail International Small Flat Rate Box"/>
+    <Service erpShippingId="usps_PMIMFRB" ecommerceShippingId="usps_Priority Mail International Medium Flat Rate Box" description="Priority Mail International Medium Flat Rate Box"/>
+    <Service erpShippingId="usps_PMILFRB" ecommerceShippingId="usps_INT_11" description="Priority Mail International Large Flat Rate Box"/>
+    <Service erpShippingId="usps_GXGEN" ecommerceShippingId="usps_INT_12" description="USPS GXG Envelopes"/>
+    <Service erpShippingId="usps_2" ecommerceShippingId="usps_2" description="Priority Mail Express Hold For Pickup"/>
+    <Service erpShippingId="usps_0_FCPC" ecommerceShippingId="usps_0_FCPC" description="First-Class Mail Postcards"/>
+    <Service erpShippingId="usps_3" ecommerceShippingId="usps_3" description="Priority Mail Express"/>
+    <Service erpShippingId="usps_13" ecommerceShippingId="usps_13" description="Priority Mail Express Flat Rate Envelope"/>
+    <Service erpShippingId="usps_23" ecommerceShippingId="usps_23" description="First-Class Mail Large Postcards"/>
+    <Service erpShippingId="usps_25" ecommerceShippingId="usps_25" description="Priority Mail Express Sunday/Holiday Delivery Flat Rate Envelope"/>
+    <Service erpShippingId="usps_29" ecommerceShippingId="usps_29" description="Priority Mail Padded Flat Rate Envelope"/>
+    <Service erpShippingId="usps_30" ecommerceShippingId="usps_30" description="Priority Mail Express Legal Flat Rate Envelope"/>
+    <Service erpShippingId="usps_31" ecommerceShippingId="usps_31" description="Priority Mail Express Legal Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_32" ecommerceShippingId="usps_32" description="Priority Mail Express Sunday/Holiday Delivery Legal Flat Rate Envelope"/>
+    <Service erpShippingId="usps_33" ecommerceShippingId="usps_33" description="Priority Mail Hold For Pickup"/>
+    <Service erpShippingId="usps_34" ecommerceShippingId="usps_34" description="Priority Mail Large Flat Rate Box Hold For Pickup"/>
+    <Service erpShippingId="usps_35" ecommerceShippingId="usps_35" description="Priority Mail Medium Flat Rate Box Hold For Pickup"/>
+    <Service erpShippingId="usps_36" ecommerceShippingId="usps_36" description="Priority Mail Small Flat Rate Box Hold For Pickup"/>
+    <Service erpShippingId="usps_37" ecommerceShippingId="usps_37" description="Priority Mail Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_38" ecommerceShippingId="usps_38" description="Priority Mail Gift Card Flat Rate Envelope"/>
+    <Service erpShippingId="usps_39" ecommerceShippingId="usps_39" description="Priority Mail Gift Card Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_40" ecommerceShippingId="usps_40" description="Priority Mail Window Flat Rate Envelope"/>
+    <Service erpShippingId="usps_41" ecommerceShippingId="usps_41" description="Priority Mail Window Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_42" ecommerceShippingId="usps_42" description="Priority Mail Small Flat Rate Envelope"/>
+    <Service erpShippingId="usps_43" ecommerceShippingId="usps_43" description="Priority Mail Small Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_44" ecommerceShippingId="usps_44" description="Priority Mail Legal Flat Rate Envelope"/>
+    <Service erpShippingId="usps_45" ecommerceShippingId="usps_45" description="Priority Mail Legal Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_46" ecommerceShippingId="usps_46" description="Priority Mail Padded Flat Rate Envelope Hold For Pickup"/>
+    <Service erpShippingId="usps_47" ecommerceShippingId="usps_47" description="Priority Mail Regional Rate Box A"/>
+    <Service erpShippingId="usps_48" ecommerceShippingId="usps_48" description="Priority Mail Regional Rate Box A Hold For Pickup"/>
+    <Service erpShippingId="usps_49" ecommerceShippingId="usps_49" description="Priority Mail Regional Rate Box B"/>
+    <Service erpShippingId="usps_50" ecommerceShippingId="usps_50" description="Priority Mail Regional Rate Box B Hold For Pickup"/>
+    <Service erpShippingId="usps_53" ecommerceShippingId="usps_53" description="First-Class Package Service Hold For Pickup"/>
+    <Service erpShippingId="usps_55" ecommerceShippingId="usps_55" description="Priority Mail Express Flat Rate Boxes"/>
+    <Service erpShippingId="usps_56" ecommerceShippingId="usps_56" description="Priority Mail Express Flat Rate Boxes Hold For Pickup"/>
+    <Service erpShippingId="usps_57" ecommerceShippingId="usps_57" description="Priority Mail Express Sunday/Holiday Delivery Flat Rate Boxes"/>
+    <Service erpShippingId="usps_58" ecommerceShippingId="usps_58" description="Priority Mail Regional Rate Box C"/>
+    <Service erpShippingId="usps_59" ecommerceShippingId="usps_59" description="Priority Mail Regional Rate Box C Hold For Pickup"/>
+    <Service erpShippingId="usps_INT_5" ecommerceShippingId="usps_INT_5" description="Global Express Guaranteed Document"/>
+    <Service erpShippingId="usps_INT_17" ecommerceShippingId="usps_INT_17" description="Priority Mail Express International Legal Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_18" ecommerceShippingId="usps_INT_18" description="Priority Mail International Gift Card Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_19" ecommerceShippingId="usps_INT_19" description="Priority Mail International Window Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_20" ecommerceShippingId="usps_INT_20" description="Priority Mail International Small Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_21" ecommerceShippingId="usps_INT_21" description="First-Class Mail International Postcard"/>
+    <Service erpShippingId="usps_INT_22" ecommerceShippingId="usps_INT_22" description="Priority Mail International Legal Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_23" ecommerceShippingId="usps_INT_23" description="Priority Mail International Padded Flat Rate Envelope"/>
+    <Service erpShippingId="usps_INT_24" ecommerceShippingId="usps_INT_24" description="Priority Mail International DVD Flat Rate priced box"/>
+    <Service erpShippingId="usps_INT_25" ecommerceShippingId="usps_INT_25" description="Priority Mail International Large Video Flat Rate priced box"/>
+    <Service erpShippingId="usps_INT_26" ecommerceShippingId="usps_INT_26" description="Priority Mail Express International Flat Rate Boxes"/>
+    <Service erpShippingId="usps_INT_27" ecommerceShippingId="usps_INT_27" description="Priority Mail Express International Padded Flat Rate Envelope"/>
+  </Carrier>
+  <Carrier id="royal" description="Royal Shipping Methods">
+    <Service erpShippingId="ROYALMAIL_LETTE" ecommerceShippingId="royalmail_letter" description="Royal Letter"/>
+    <Service erpShippingId="ROYALMAL_LRGLTR" ecommerceShippingId="royalmail_largeletter" description="Royal Large Letter"/>
+    <Service erpShippingId="ROYALMAL_SENDCL" ecommerceShippingId="royalmail_secondclass" description="Royal Mail Second Class"/>
+    <Service erpShippingId="RYLMAL_SNDCLSRE" ecommerceShippingId="royalmail_secondclassrecordedsignedfor" description="Royal Mail Second Class Record Signed For"/>
+    <Service erpShippingId="RYLMAL_FIRSTCLASS" ecommerceShippingId="royalmail_firstclass" description="Royal Mail First Class"/>
+    <Service erpShippingId="RYLMAL_FSTCLSRE" ecommerceShippingId="royalmail_firstclassrecordedsignedfor" description="Royal Mail First Class Recorded Signed For"/>
+    <Service erpShippingId="RYLMAL_STRDPRCL" ecommerceShippingId="royalmail_standardparcel" description="Royal Mail Standard Parcel"/>
+    <Service erpShippingId="RYLMAL_SRDPR100" ecommerceShippingId="royalmail_standardparcel100" description="RoyalMail_StandardParcel100"/>
+    <Service erpShippingId="RYLMAL_SRDPR250" ecommerceShippingId="royalmail_standardparcel250" description="RoyalMail_StandardParcel250"/>
+    <Service erpShippingId="RYMAL_SRDPR500" ecommerceShippingId="royalmail_standardparcel500" description="RoyalMail_StandardParcel500"/>
+    <Service erpShippingId="RYLSPLNXTDAY500" ecommerceShippingId="royalmail_specialdeliverynextday500" description="RoyalMail_SpecialDeliveryNextDay500"/>
+    <Service erpShippingId="RYSPLNXTDAY1000" ecommerceShippingId="royalmail_specialdeliverynextday1000" description="RoyalMail_SpecialDeliveryNextDay1000"/>
+    <Service erpShippingId="RYSPLNXTDAY2500" ecommerceShippingId="royalmail_specialdeliverynextday2500" description="RoyalMail_SpecialDeliveryNextDay2500"/>
+    <Service erpShippingId="RYMALSPLDVRY9AM" ecommerceShippingId="royalmail_specialdelivery9am50" description="RoyalMail_SpecialDelivery9am50"/>
+    <Service erpShippingId="RYSPLDRY9AM1000" ecommerceShippingId="royalmail_specialdelivery9am1000" description="RoyalMail_SpecialDelivery9am1000"/>
+    <Service erpShippingId="PYSPLDRY9AM2500" ecommerceShippingId="royalmail_specialdelivery9am2500" description="RoyalMail_SpecialDelivery9am2500"/>
+    <Service erpShippingId="RYLMAIL_AIRMAIL" ecommerceShippingId="royalmail_airmail" description="RoyalMail_Airmail"/>
+    <Service erpShippingId="RYLMAIL_AIRSURE" ecommerceShippingId="royalmail_airsure" description="RoyalMail_Airsure"/>
+    <Service erpShippingId="RYMAL_AIRSURINS" ecommerceShippingId="royalmail_airsureinsurance" description="RoyalMail_AirSureInsurance"/>
+    <Service erpShippingId="RYLMAL_INTNSIGN" ecommerceShippingId="royalmail_internationalsignedfor" description="RoyalMail_International Signed For"/>
+    <Service erpShippingId="RYL_INTNTSINSUR" ecommerceShippingId="royalmail_internationalsignedforinsurance" description="RoyalMail_International Signed For Insurance"/>
+    <Service erpShippingId="RYMAL_SRFCEMAIL" ecommerceShippingId="royalmail_surfacemail" description="RoyalMail_SurfaceMail"/>
+  </Carrier>
+  <Carrier id="Australia Shipping Methods" description="Australia Method">
+    <Service erpShippingId="AUSPOS_SEA" ecommerceShippingId="australiapost_SEA" description="AustraliaPost_SEA"/>
+    <Service erpShippingId="AUSPOST_AIR" ecommerceShippingId="australiapost_AIR" description="Australiapost_AIR"/>
+    <Service erpShippingId="AUSPOST_EPI" ecommerceShippingId="australiapost_EPI" description="Australiapost_EPI"/>
+  </Carrier>
+  <Carrier id="fedex" description="Federal Express">
+    <Service erpShippingId="fedex_PRIOVRNT" ecommerceShippingId="fedex_PRIORITY_OVERNIGHT" description="Priority Overnight"/>
+    <Service erpShippingId="fedex_STDOVRNT" ecommerceShippingId="fedex_STANDARD_OVERNIGHT" description="Standard Overnight"/>
+    <Service erpShippingId="fedex_FOVRNT" ecommerceShippingId="fedex_FIRST_OVERNIGHT" description="First Overnight"/>
+    <Service erpShippingId="fedex_2D" ecommerceShippingId="fedex_FEDEX_2_DAY" description="2Day"/>
+    <Service erpShippingId="FEDEX_2D_AM" ecommerceShippingId="fedex_FEDEX_2_DAY_AM" description="2Day"/>
+    <Service erpShippingId="fedex_EXPS" ecommerceShippingId="fedex_FEDEX_EXPRESS_SAVER" description="Express Saver"/>
+    <Service erpShippingId="fedex_IP" ecommerceShippingId="fedex_INTERNATIONAL_PRIORITY" description="International Priority"/>
+    <Service erpShippingId="fedex_IE" ecommerceShippingId="fedex_INTERNATIONAL_ECONOMY" description="International Economy"/>
+    <Service erpShippingId="fedex_IF" ecommerceShippingId="fedex_INTERNATIONAL_FIRST" description="International First"/>
+    <Service erpShippingId="fedex_1DFT" ecommerceShippingId="fedex_FEDEX_1_DAY_FREIGHT" description="1 Day Freight"/>
+    <Service erpShippingId="fedex_2DFT" ecommerceShippingId="fedex_FEDEX_2_DAY_FREIGHT" description="2 Day Freight"/>
+    <Service erpShippingId="fedex_3DFT" ecommerceShippingId="fedex_FEDEX_2_DAY_FREIGHT" description="3 Day Freight"/>
+    <Service erpShippingId="fedex_HD" ecommerceShippingId="fedex_GROUND_HOME_DELIVERY" description="Home Delivery"/>
+    <Service erpShippingId="fedex_IPF" ecommerceShippingId="fedex_INTERNATIONAL_PRIORITY_FREIGHT" description="Intl Priority Freight"/>
+    <Service erpShippingId="fedex_IEF" ecommerceShippingId="fedex_INTERNATIONAL_ECONOMY_FREIGHT" description="Intl Economy Freight"/>
+    <Service erpShippingId="fedex_EFP" ecommerceShippingId="fedex_EUROPE_FIRST_INTERNATIONAL_PRIORITY" description="Europe First Priority"/>
+    <Service erpShippingId="FEDEX_GROUND" ecommerceShippingId="fedex_FEDEX_GROUND" description="Ground"/>
+    <Service erpShippingId="FEDEX_IN_GROUND" ecommerceShippingId="fedex_INTERNATIONAL_GROUND" description="International Ground"/>
+    <Service erpShippingId="FEDEX_SMART_POS" ecommerceShippingId="fedex_SMART_POST" description="Smart Post"/>
+    <Service erpShippingId="FEDEX_FERIGHT" ecommerceShippingId="fedex_FEDEX_FREIGHT" description="Freight"/>
+    <Service erpShippingId="FEDEX_NTON_FERR" ecommerceShippingId="fedex_FEDEX_NATIONAL_FREIGHT" description="National Freight"/>
+  </Carrier>
+  <Carrier id="dhl" description="DHL">
+    <Service erpShippingId="dhl_S" ecommerceShippingId="dhl_S" description="Second Day Service"/>
+    <Service erpShippingId="dhl_G" ecommerceShippingId="dhl_G" description="Ground"/>
+    <Service erpShippingId="dhl_IE" ecommerceShippingId="dhl_IE" description="International Express"/>
+    <Service erpShippingId="dhl_E SAT" ecommerceShippingId="dhl_E SAT" description="Express Saturday"/>
+    <Service erpShippingId="dhl_E 10:30AM" ecommerceShippingId="dhl_E 10:30AM" description="Express 10:30 AM"/>
+  </Carrier>
+</ShippingMethod>

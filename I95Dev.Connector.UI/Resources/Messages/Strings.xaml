@@ -1,0 +1,182 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="Tittle">i95Dev Magento-GP Connector</system:String>
+    <system:String x:Key="MenuDashboard">_Dashboard</system:String>
+    <system:String x:Key="MenuDashboardErp">_ERP</system:String>
+    <system:String x:Key="MenuDashboardErpSummary">_Summary</system:String>
+    <system:String x:Key="MenuDashboardErpReport">_Report</system:String>
+    <system:String x:Key="MenuDashboardEcommerce">_Magento</system:String>
+    <system:String x:Key="MenuDashboardEcommerceSummary">_Summary</system:String>
+    <system:String x:Key="MenuDashboardEcommerceReport">_Report</system:String>
+    <system:String x:Key="MenuConfiguration">_Configuration</system:String>
+    <system:String x:Key="MenuSchedulers">_Schedulers</system:String>
+    <system:String x:Key="MenuLogFiles">_Log Files</system:String>
+    <system:String x:Key="MenuAdmin">I95DEV ADMIN</system:String>
+    <system:String x:Key="MenuEventViewer">_Reports</system:String>
+    <system:String x:Key="MenuConfigurationConnector">_Connector Configurations</system:String>
+    <system:String x:Key="MenuConfigurationNotification">_Notification Settings</system:String>
+    <system:String x:Key="MenuConfigurationLogger">_Logger Settings</system:String>
+    <system:String x:Key="MenuAdminConfiguration">_CONFIGURATIONS</system:String>
+    <system:String x:Key="MenuAdminMasters">_MASTERS</system:String>
+    <system:String x:Key="MenuAdminMastersCategory">_CATEGORY MASTERS</system:String>
+    <system:String x:Key="MenuAdminMastersCategoryMapping">_CATEGORY MAPPING</system:String>
+    <system:String x:Key="MenuReportsScheduler">_Schedulers</system:String>
+    <system:String x:Key="MenuReportsNotifications">_Notifications</system:String>
+    <system:String x:Key="MenuReportsExclusions">_Exclusions</system:String>
+    <system:String x:Key="MenuDashboardSummary">_Summary</system:String>
+    <system:String x:Key="MenuAdminDiagnostics">_Diagnostics</system:String>
+
+    <system:String x:Key="ButtonReset" xml:space="preserve">RESET</system:String>
+    <system:String x:Key="ButtonFind" xml:space="preserve">SHOW RESULTS</system:String>
+    <system:String x:Key="ButtonUpdate" xml:space="preserve">Update</system:String>
+    <system:String x:Key="ButtonSave" xml:space="preserve">Save</system:String>
+    <system:String x:Key="ButtonClose" xml:space="preserve">Close</system:String>
+
+    <system:String x:Key="PasswordTittle">Authentication</system:String>
+    <system:String x:Key="PasswordCurrentUserName" xml:space="preserve">Current User Name : </system:String>
+    <system:String x:Key="PasswordPassword" xml:space="preserve">Enter your password : </system:String>
+    <system:String x:Key="PasswordNote">Note: Please enter your windows login credentials</system:String>
+    <system:String x:Key="PasswordSubmit">Submit</system:String>
+
+    <system:String x:Key="SchedulerHeading">SCHEDULERS</system:String>
+    <system:String x:Key="SchedulerPanel1Heading">CLOUD TO CONNECTOR</system:String>
+    <system:String x:Key="SchedulerPanel2Heading">GP TO CONNECTOR</system:String>
+    <system:String x:Key="SchedulerPanel3Heading">CONNECTOR TO CLOUD</system:String>
+    <system:String x:Key="SchedulerPanel4Heading">CLOUD TO CONNECTOR</system:String>
+    <system:String x:Key="SchedulerPanel5Heading">CLEAN UP DATA</system:String>
+
+    <system:String x:Key="SchedulerName" xml:space="preserve">Name</system:String>
+    <system:String x:Key="SchedulerStatus" xml:space="preserve">Status </system:String>
+    <system:String x:Key="SchedulerLastRunTime" xml:space="preserve">Last Run Time </system:String>
+    <system:String x:Key="SchedulerNextRunTime" xml:space="preserve">Next Run Time  </system:String>
+    <system:String x:Key="SchedulerEnable" xml:space="preserve">ENABLE</system:String>
+    <system:String x:Key="SchedulerDisable" xml:space="preserve">DISABLE</system:String>
+    <system:String x:Key="SchedulerRun" xml:space="preserve">RUN</system:String>
+    <system:String x:Key="SchedulerStop" xml:space="preserve">STOP</system:String>
+
+    <system:String x:Key="ReportsNotifications">NOTIFICATIONS</system:String>
+    <system:String x:Key="ReportsExclusions">EXCLUSIONS</system:String>
+
+    <system:String x:Key="ConfigurationSettingsHeading">CONFIGURATION SETTINGS</system:String>
+    <system:String x:Key="ConfigurationSettingsFormConfigType">Type</system:String>
+    <system:String x:Key="ConfigurationSettingsFormConfigGroup">Group</system:String>
+    <system:String x:Key="ConfigurationSettingsFormConfigKey">Key</system:String>
+    <system:String x:Key="ConfigurationSettingsPopupHeading">CONFIGURATION SETTING</system:String>
+    <system:String x:Key="ConfigurationSettingsPopupConfigType">Configuration Type</system:String>
+    <system:String x:Key="ConfigurationSettingsPopupConfigGroup">Configuration Group</system:String>
+    <system:String x:Key="ConfigurationSettingsPopupConfigKey">Configuration Key</system:String>
+    <system:String x:Key="ConfigurationSettingsPopupConfigValue">Configuration Value</system:String>
+
+    <system:String x:Key="ConfigurationSettingsGridHeadingConfigType">Type</system:String>
+    <system:String x:Key="ConfigurationSettingsGridHeadingGroup">Group</system:String>
+    <system:String x:Key="ConfigurationSettingsGridHeadingKey">Key</system:String>
+    <system:String x:Key="ConfigurationSettingsGridHeadingValue">Value</system:String>
+    <system:String x:Key="ConfigurationSettingsGridHeadingUpdate">Action</system:String>
+    <system:String x:Key="ConfigurationSettingsGridRowUpdate">Update</system:String>
+
+    <system:String x:Key="LogfileHeading" xml:space="preserve">LOG FILES</system:String>
+    <system:String x:Key="LogfileGbHeading" xml:space="preserve">FIND BY DATA</system:String>
+    <system:String x:Key="LogfileFormFileName" xml:space="preserve">File Name  </system:String>
+    <system:String x:Key="LogfileFormFileSize" xml:space="preserve">File Size (in Kb)  </system:String>
+    <system:String x:Key="LogfileFormCreatedTime" xml:space="preserve">LOG CREATED</system:String>
+    <system:String x:Key="LogfileFormUpdatedTime" xml:space="preserve">LOG UPDATED</system:String>
+    <system:String x:Key="LogfileGridSno" xml:space="preserve">S.no.</system:String>
+    <system:String x:Key="LogfileGridFileName" xml:space="preserve">FILE NAME</system:String>
+    <system:String x:Key="LogfileGridUpdatedTime" xml:space="preserve">MODIFIED DATE</system:String>
+    <system:String x:Key="LogfileGridCreatedTime" xml:space="preserve">CREATED DATE</system:String>
+    <system:String x:Key="LogfileGridFileSize" xml:space="preserve">FILE SIZE</system:String>
+    <system:String x:Key="LogfileGridFileType" xml:space="preserve">FILE TYPE</system:String>
+
+    <system:String x:Key="NotificationHeading" xml:space="preserve">NOTIFICATIONS SETTINGS</system:String>
+    <system:String x:Key="NotificationNotificationPanelHeading" xml:space="preserve">NOTIFICATIONS</system:String>
+    <system:String x:Key="NotificationLoggerPanelHeading" xml:space="preserve">LOGGER</system:String>
+
+    <system:String x:Key="TestMailSuccessful" xml:space="preserve">Test Mail is Successful</system:String>
+    <system:String x:Key="DataUpdateSuccess" xml:space="preserve">Data updated successfully</system:String>
+    <system:String x:Key="MailSubjectTest" xml:space="preserve">Test Notification</system:String>
+
+    <system:String x:Key="NotificationFormSmtp" xml:space="preserve">SMTP server address </system:String>
+    <system:String x:Key="NotificationFormPortNumber" xml:space="preserve">Port Number  </system:String>
+    <system:String x:Key="NotificationFormSsl" xml:space="preserve">Enable SSL </system:String>
+    <system:String x:Key="NotificationFormAuthentication" xml:space="preserve">Mail  Authentication</system:String>
+    <system:String x:Key="NotificationFormAuthenticationWindows" xml:space="preserve">Windows</system:String>
+    <system:String x:Key="NotificationFormAuthenticationUser" xml:space="preserve">User </system:String>
+    <system:String x:Key="NotificationFormUserName" xml:space="preserve">User Name  </system:String>
+    <system:String x:Key="NotificationFormPassword" xml:space="preserve">Password  </system:String>
+    <system:String x:Key="NotificationFormConfirmPassword" xml:space="preserve">Confirm Password  </system:String>
+    <system:String x:Key="NotificationFormRecipients" xml:space="preserve">Add Recipients </system:String>
+    <system:String x:Key="NotificationFormEnableNotifications" xml:space="preserve">Enable Notifications : </system:String>
+    <system:String x:Key="NotificationFormNotificationEnabled" xml:space="preserve">Enable Notifications </system:String>
+    <system:String x:Key="NotificationFormNotificationScheduler" xml:space="preserve">Notifications schedule </system:String>
+    <system:String x:Key="NotificationFormButtonTest" xml:space="preserve">SEND TEST MAIL </system:String>
+    <system:String x:Key="NotificationFormButtonUpdate" xml:space="preserve">UPDATE</system:String>
+
+    <system:String x:Key="LoggerSettingsHeading" xml:space="preserve">Logger Settings</system:String>
+    <system:String x:Key="LoggerSettingsFormEnableLogging" xml:space="preserve">Enable logging </system:String>
+    <system:String x:Key="LoggerSettingsFormDeleteLogDays" xml:space="preserve">Delete Success Logs After  </system:String>
+    <system:String x:Key="LoggerSettingsFormDeleteErrorLogDays" xml:space="preserve">Delete Error Logs After </system:String>
+    <system:String x:Key="LoggerSettingsFormButtonUpdate">UPDATE</system:String>
+
+    <system:String x:Key="ReportsSchedulerHeading">Schedulers</system:String>
+    <system:String x:Key="ReportsSchedulerGbPanelHeading">Find by Scheduler data</system:String>
+    <system:String x:Key="ReportsSchedulersFormEntity" xml:space="preserve">Entity : </system:String>
+    <system:String x:Key="ReportsSchedulersFormCreatedTime" xml:space="preserve">Scheduler Created Time : </system:String>
+    <system:String x:Key="ReportsSchedulersFormStartTime" xml:space="preserve">Scheduler Start Time : </system:String>
+    <system:String x:Key="ReportsSchedulersFormEndTime" xml:space="preserve">Scheduler End Time : </system:String>
+    <system:String x:Key="ReportsSchedulersFormRecords" xml:space="preserve">No.of Records : </system:String>
+    <system:String x:Key="ReportsSchedulersFormTo" xml:space="preserve"> To </system:String>
+    <system:String x:Key="ReportsSchedulersSumOfRecords" xml:space="preserve"> Sum of Records count : </system:String>
+
+    <system:String x:Key="ReportsNotificationHeading" xml:space="preserve">REPORTS</system:String>
+    <system:String x:Key="ReportsNotificationGbHeading" xml:space="preserve">FIND BY DATA</system:String>
+    <system:String x:Key="ReportsNotificationFormCategory" xml:space="preserve">Category</system:String>
+    <system:String x:Key="ReportsNotificationFormMail" xml:space="preserve">Mail Sent </system:String>
+    <system:String x:Key="ReportsNotificationFormFromDate" xml:space="preserve">From </system:String>
+    <system:String x:Key="ReportsNotificationFormToDate" xml:space="preserve">To</system:String>
+    <system:String x:Key="ReportsNotificationListViewEventId" xml:space="preserve">EVENTID</system:String>
+    <system:String x:Key="ReportsNotificationListViewCategory" xml:space="preserve">CATEGORY</system:String>
+    <system:String x:Key="ReportsNotificationListViewDescription" xml:space="preserve">DESCRIPTION</system:String>
+    <system:String x:Key="ReportsNotificationListViewCreatedTime" xml:space="preserve">CREATED DATE</system:String>
+    <system:String x:Key="ReportsNotificationListViewMainSent" xml:space="preserve">MAIL SENT</system:String>
+    <system:String x:Key="ReportsNotificationFormEventId" xml:space="preserve">ID </system:String>
+    <system:String x:Key="ReportsNotificationsForm2Heading" xml:space="preserve">NOTIFICATION DETAILS</system:String>
+    <system:String x:Key="ReportsNotificationsForm2Category" xml:space="preserve">CATEGORY</system:String>
+    <system:String x:Key="ReportsNotificationsForm2Mail" xml:space="preserve">MAIL ALERT SENT</system:String>
+    <system:String x:Key="ReportsNotificationsForm2Time" xml:space="preserve">OCCURED TIME</system:String>
+    <system:String x:Key="ReportsNotificationsForm2Description" xml:space="preserve">DESCRIPTION</system:String>
+    <system:String x:Key="ReportsNotificationsForm2Details" xml:space="preserve">DETAILED DESCRIPTION </system:String>
+
+    <system:String x:Key="ReportsExclusionsHeading" xml:space="preserve">EXCLUSIONS</system:String>
+    <system:String x:Key="ReportsExclusionsGbHeading">FIND BY DATA</system:String>
+    <system:String x:Key="ReportsExclusionsFormEntity" xml:space="preserve">Entity  </system:String>
+    <system:String x:Key="ReportsExclusionsFormCreatedTime" xml:space="preserve">From  </system:String>
+    <system:String x:Key="ReportsExclusionsFormTo" xml:space="preserve"> To </system:String>
+    <system:String x:Key="ReportsExclusionsFormRecordId" xml:space="preserve">Record ID</system:String>
+    <system:String x:Key="ReportsExclusionsGridId" xml:space="preserve">ID</system:String>
+    <system:String x:Key="ReportsExclusionsGridEntityName" xml:space="preserve">ENTITY</system:String>
+    <system:String x:Key="ReportsExclusionsGridRecordId" xml:space="preserve">RECORD ID</system:String>
+    <system:String x:Key="ReportsExclusionsGridCreatedTime" xml:space="preserve">CREATED DATE</system:String>
+    <system:String x:Key="ReportsExclusionsGridParameters" xml:space="preserve">PARAMETERS</system:String>
+    <system:String x:Key="ReportsExclusionsGridView" xml:space="preserve">ACTIONS</system:String>
+
+    <system:String x:Key="ReportsRecordViewerHeader">Record Details</system:String>
+    <system:String x:Key="ReportsRecordViewerEntity" xml:space="preserve">Entity  </system:String>
+    <system:String x:Key="ReportsRecordViewerRecordId" xml:space="preserve">Record ID  </system:String>
+    <system:String x:Key="ReportsRecordViewerCreatedTime" xml:space="preserve">Created Time  </system:String>
+    <system:String x:Key="ReportsRecordViewerRecordDetails" xml:space="preserve">Record Details  </system:String>
+
+    <system:String x:Key="ReportsNotificationRecordViewerHeader">Record Details</system:String>
+    <system:String x:Key="ReportsNotificationRecordViewerEntity" xml:space="preserve">Entity  </system:String>
+    <system:String x:Key="ReportsNotificationRecordViewerRecordId" xml:space="preserve">Record ID  </system:String>
+    <system:String x:Key="ReportsNotificationRecordViewerCreatedTime" xml:space="preserve">Created Time  </system:String>
+    <system:String x:Key="ReportsNotificationRecordViewerMailSend" xml:space="preserve">Mail Send</system:String>
+    <system:String x:Key="ReportsNotificationRecordViewerRecordDetails" xml:space="preserve">Record Details  </system:String>
+
+    <system:String x:Key="AuthenticationHeading" xml:space="preserve">AUTHENTICATION</system:String>
+    <system:String x:Key="AuthenticationUserName" xml:space="preserve">User Name</system:String>
+    <system:String x:Key="AuthenticationPassword" xml:space="preserve">Password</system:String>
+    <system:String x:Key="AuthenticationSubmit" xml:space="preserve">Submit</system:String>
+</ResourceDictionary>

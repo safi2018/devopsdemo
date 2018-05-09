@@ -1,0 +1,227 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    x:Class="I95Dev.Connector.UI.Views.Configuration.NotificationsView"
+    xmlns:nf="clr-namespace:I95Dev.Connector.Base.Helpers;assembly=I95Dev.Connector.Base"
+    xmlns:converters="clr-namespace:I95Dev.Connector.UI.Base.Services.Converters;assembly=I95Dev.Connector.UI.Base"
+    xmlns:validations="clr-namespace:I95Dev.Connector.UI.Base.Services.Validations;assembly=I95Dev.Connector.UI.Base"
+    xmlns:commands="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Commands;assembly=I95Dev.Connector.UI.Base"
+    xmlns:helpers="clr-namespace:I95Dev.Connector.UI.Base.Helpers;assembly=I95Dev.Connector.UI.Base"
+    xmlns:configuration="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Configuration;assembly=I95Dev.Connector.UI.Base"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="900"
+    d:DataContext="{d:DesignInstance Type=configuration:NotificationViewModel}">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converters:BoolInverter x:Key="BoolInverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Style TargetType="StackPanel">
+                        <Setter
+                            Property="Margin"
+                            Value="0,5,0,5" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Text="{DynamicResource NotificationHeading}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+
+        <StackPanel Name="GridMain"
+            Grid.Row="1"
+            Background="{StaticResource PanelBackground}">
+            <Grid
+                DataContext="{Binding Settings}"
+                Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="0">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormSmtp}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <TextBox
+                            Width="200"
+                            Text="{Binding SmtpServer,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="1">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormPortNumber}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <TextBox Width="200">
+                        <TextBox.Text>
+                            <Binding
+                                    Path="PortNumber"
+                                    UpdateSourceTrigger="PropertyChanged"
+                                    ValidatesOnDataErrors="True"
+                                    Mode="TwoWay">
+                                <Binding.ValidationRules>
+                                    <validations:IntegerValidation />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </StackPanel>
+
+                <CheckBox
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Content="{DynamicResource NotificationFormSsl}"
+                        IsChecked="{Binding EnableSsl,Mode=TwoWay}"
+                        VerticalAlignment="Bottom"
+                        FontWeight="SemiBold" />
+                <CheckBox
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Content="{DynamicResource NotificationFormNotificationEnabled}"
+                        IsChecked="{Binding NotificationsEnabled,Mode=TwoWay}"
+                        VerticalAlignment="Bottom"
+                        FontWeight="SemiBold" />
+
+                <StackPanel
+                        Grid.Row="2"
+                        Grid.Column="0">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormAuthentication}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <StackPanel
+                            Orientation="Horizontal"
+                            Margin="0,5,0,5">
+                        <RadioButton
+                                GroupName="Authentication"
+                                IsChecked="{Binding UserAuthentication, Converter={StaticResource BoolInverter},Mode=TwoWay}"
+                                Content="{DynamicResource NotificationFormAuthenticationWindows}" />
+                        <RadioButton
+                                x:Name="RadioButton"
+                                GroupName="Authentication"
+                                IsChecked="{Binding UserAuthentication,Mode=TwoWay}"
+                                Margin="10 0 0 0"
+                                Content="{DynamicResource NotificationFormAuthenticationUser}" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="3"
+                        Grid.Column="0">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormUserName}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <TextBox
+                            Width="200"
+                            IsEnabled="{Binding IsChecked, ElementName=RadioButton}"
+                            Text="{Binding UserName}" />
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="3"
+                        Grid.Column="1">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormPassword}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <PasswordBox
+                            Width="200"
+                            IsEnabled="{Binding IsChecked, ElementName=RadioButton}"
+                            commands:PasswordHelper.Attach="True"
+                            commands:PasswordHelper.Password="{Binding Password,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="3"
+                        Grid.Column="2">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormConfirmPassword}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <PasswordBox
+                            Width="200"
+                            IsEnabled="{Binding IsChecked, ElementName=RadioButton}"
+                            commands:PasswordHelper.Attach="True"
+                            commands:PasswordHelper.Password="{Binding ConfirmPassword,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="3"
+                        Grid.Column="3">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormNotificationScheduler}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <ComboBox
+                            Width="150"
+                            ItemsSource="{Binding Source={helpers:EnumBindingSource {x:Type nf:NotificationFrequency}}}"
+                            SelectedValue="{Binding NotificationFrequency,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4">
+                    <TextBlock
+                            Text="{DynamicResource NotificationFormRecipients}"
+                            Style="{DynamicResource TextBlockLeft}" />
+                    <TextBox
+                            HorizontalAlignment="Stretch"
+                            Text="{Binding ToMail,Mode=TwoWay}"
+                            Margin="0,0,50,0" />
+                </StackPanel>
+
+                <Button
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,5,0"
+                        Style="{StaticResource FormButton}"
+                        Content="{DynamicResource NotificationFormButtonTest}"
+                        Width="120"
+                        Command="{Binding DataContext.TestSettingsCommand, ElementName=GridMain}" />
+                <Button
+                        Grid.Row="5"
+                        Grid.Column="2"
+                        HorizontalAlignment="Left"
+                        Margin="5,0,0,0"
+                        Style="{StaticResource FormButton}"
+                        Content="{DynamicResource NotificationFormButtonUpdate}"
+                        Width="100"
+                        IsDefault="True"
+                        Command="{Binding DataContext.UpdateSettingsCommand, ElementName=GridMain}" />
+
+                <TextBlock
+                        Grid.Row="6"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="4"
+                        Text="{Binding DataContext.ValidationMessage, ElementName=GridMain}"
+                        HorizontalAlignment="Center"
+                        Foreground="Red"
+                        Style="{StaticResource NormalTextBlock}" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

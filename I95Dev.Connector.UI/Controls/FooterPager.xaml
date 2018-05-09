@@ -1,0 +1,109 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    x:Class="I95Dev.Connector.UI.Controls.FooterPager"
+    mc:Ignorable="d"
+    Height="45">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <system:Double x:Key="ButtonSize">25</system:Double>
+            <system:Double x:Key="IconSize">18</system:Double>
+            <SolidColorBrush x:Key="IconColor">#000000</SolidColorBrush>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel
+        Orientation="Horizontal"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Stretch"
+        Background="Transparent"
+        Margin="0,5,10,0">
+        <Button
+            Width="{StaticResource ButtonSize}"
+            Height="{StaticResource ButtonSize}"
+            Command="{Binding FirstCommand}"
+            Background="Transparent"
+            BorderThickness="0"
+            Cursor="Hand"
+            VerticalAlignment="Center">
+            <Rectangle
+                Fill="{StaticResource IconColor}"
+                Height="{StaticResource IconSize}"
+                Width="{StaticResource IconSize}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush
+                        Stretch="Uniform"
+                        Visual="{DynamicResource FirstPage}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+        <Button
+            Width="{StaticResource ButtonSize}"
+            Height="{StaticResource ButtonSize}"
+            Command="{Binding PreviousCommand}"
+            Background="Transparent"
+            BorderThickness="0"
+            Cursor="Hand"
+            VerticalAlignment="Center">
+            <Rectangle
+                Width="{StaticResource IconSize}"
+                Height="{StaticResource IconSize}"
+                Fill="{StaticResource IconColor}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush
+                        Stretch="Uniform"
+                        Visual="{DynamicResource PreviousPage}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+
+        <ListBox
+            Width="Auto"
+            VerticalAlignment="Center"
+            SelectedValue="{Binding CurrentPage,Mode=TwoWay}"
+            ItemsSource="{Binding PageNumbers}"
+            SelectedValuePath="Value"
+            DisplayMemberPath="Name"
+            BorderThickness="0" />
+
+        <Button
+            Width="{StaticResource ButtonSize}"
+            Height="{StaticResource ButtonSize}"
+            Command="{Binding NextCommand}"
+            Background="Transparent" BorderThickness="0"
+            Cursor="Hand"
+            VerticalAlignment="Center">
+            <Rectangle
+                Width="{StaticResource IconSize}"
+                Height="{StaticResource IconSize}"
+                Fill="{StaticResource IconColor}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush
+                        Stretch="Uniform"
+                        Visual="{DynamicResource NextPage}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+        <Button
+            Width="{StaticResource ButtonSize}"
+            Height="{StaticResource ButtonSize}"
+            Command="{Binding LastCommand}"
+            Background="Transparent"
+            BorderThickness="0"
+            Cursor="Hand"
+            VerticalAlignment="Center">
+            <Rectangle
+                Width="{StaticResource IconSize}"
+                Height="{StaticResource IconSize}"
+                Fill="{StaticResource IconColor}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush
+                        Stretch="Uniform"
+                        Visual="{DynamicResource LastPage}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+    </StackPanel>
+</UserControl>

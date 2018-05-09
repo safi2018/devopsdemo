@@ -1,0 +1,117 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="AdminConfigurationSettingsHeading" xml:space="preserve">CONFIGURATION SETTINGS</system:String>
+    <system:String x:Key="AdminConfigurationSettingsLogHeader">Logging configuration</system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm1LogDays" xml:space="preserve">Select the no.of days to delete/archive Log files : </system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm1DeleteFiles" xml:space="preserve">Do you want to delete/archive log files : </system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm1Rb11">Delete log files</system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm1Rb12">Archive log files</system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm1LogFileMonths" xml:space="preserve">Select the no.of months to keep archive Log files : </system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm2Heading">Scheduler time configuration</system:String>
+    <system:String x:Key="AdminConfigurationSettingsGrid1Entity">Entity Name</system:String>
+    <system:String x:Key="AdminConfigurationSettingsGrid1UpdateTime">Last updated Time</system:String>
+    <system:String x:Key="AdminConfigurationSettingsForm3Heading">Entity Sync configuration</system:String>
+    <system:String x:Key="AdminConfigurationSettingsGrid2Sync1">Magento to GP</system:String>
+    <system:String x:Key="AdminConfigurationSettingsGrid2Sync2">GP to Magento</system:String>
+
+    <system:String x:Key="AdminCategoryMasterHeading" xml:space="preserve">CATEGORIES</system:String>
+    <system:String x:Key="AdminCategoryMasterValidationCategoryName" xml:space="preserve">Specify category name</system:String>
+    <system:String x:Key="AdminCategoryMasterValidationParentMatch" xml:space="preserve">Category and parent category should not be same</system:String>
+    <system:String x:Key="AdminCategoryMasterFormCategory" xml:space="preserve">Category Name : </system:String>
+    <system:String x:Key="AdminCategoryMasterFormParentCategory" xml:space="preserve">Parent Category : </system:String>
+    <system:String x:Key="AdminCategoryMasterFormMailIsRequired" xml:space="preserve">Mail required? : </system:String>
+    <system:String x:Key="AdminCategoryMasterFormHierarchyLevel" xml:space="preserve">Hierarchy Level : </system:String>
+    <system:String x:Key="AdminCategoryMasterGridId" xml:space="preserve">Id</system:String>
+    <system:String x:Key="AdminCategoryMasterGridCategoryName" xml:space="preserve">Category Name</system:String>
+    <system:String x:Key="AdminCategoryMasterGridParentId" xml:space="preserve">Parent Id</system:String>
+    <system:String x:Key="AdminCategoryMasterGridCreatedTime" xml:space="preserve">Created Time</system:String>
+    <system:String x:Key="AdminCategoryMasterGridModifiedTime" xml:space="preserve">Modified Time</system:String>
+    <system:String x:Key="AdminCategoryMasterGridMailIsRequired" xml:space="preserve">Mail Required?</system:String>
+    <system:String x:Key="AdminCategoryMasterGridHierarchyLevel" xml:space="preserve">Hierarchy Level</system:String>
+
+    <system:String x:Key="AdminCategoryMappingGbHeading" xml:space="preserve">Filter Category Mappings</system:String>
+    <system:String x:Key="AdminCategoryMappingFormCategory" xml:space="preserve">Category : </system:String>
+    <system:String x:Key="AdminCategoryMappingFormException" xml:space="preserve">Exception Name : </system:String>
+    <system:String x:Key="AdminCategoryMappingFormAddNew" xml:space="preserve">Add new Mapping</system:String>
+    <system:String x:Key="AdminCategoryMappingGridCategory" xml:space="preserve">Category</system:String>
+    <system:String x:Key="AdminCategoryMappingGridException" xml:space="preserve">Exception Type</system:String>
+    <system:String x:Key="AdminCategoryMappingGridCreatedTime" xml:space="preserve">Created Time</system:String>
+    <system:String x:Key="AdminCategoryMappingGridModifiedTime" xml:space="preserve">Modified Time</system:String>
+    <system:String x:Key="AdminCategoryMappingGridUpdate" xml:space="preserve">Update</system:String>
+    <system:String x:Key="AdminCategoryMappingGridUpdateRow" xml:space="preserve">Update</system:String>
+    <system:String x:Key="AdminCategoryMappingPopupHeader" xml:space="preserve">CATEGORY MAPPING </system:String>
+    <system:String x:Key="AdminCategoryMappingPopupCategory" xml:space="preserve">Category : </system:String>
+    <system:String x:Key="AdminCategoryMappingPopupException" xml:space="preserve">Exception Name :</system:String>
+
+    <system:String x:Key="AdminDiagnosticsHeading" xml:space="preserve">GP DIAGNOSTIC TOOL</system:String>
+    <system:String x:Key="AdminDiagnosticsFormDatabaseAuthentication" xml:space="preserve">GP Database Authentication Type</system:String>
+    <system:String x:Key="AdminDiagnosticsFormDatabaseIp" xml:space="preserve">GP Database Server Name or IP</system:String>
+    <system:String x:Key="AdminDiagnosticsFormDatabaseUserId" xml:space="preserve">User ID</system:String>
+    <system:String x:Key="AdminDiagnosticsFormDatabasePassword" xml:space="preserve">Password</system:String>
+    <system:String x:Key="AdminDiagnosticsFormCompany" xml:space="preserve">Select the Company</system:String>
+    <system:String x:Key="AdminDiagnosticsFormAxVersion" xml:space="preserve">GP Version</system:String>
+    <system:String x:Key="AdminDiagnosticsFormAxAifPort" xml:space="preserve">Aif Port</system:String>
+    <system:String x:Key="AdminDiagnosticsFormAxAifUrl" xml:space="preserve">Aif Endpoint</system:String>
+    <system:String x:Key="AdminDiagnosticsFormMagentoUrl" xml:space="preserve">Magento Url</system:String>
+    <system:String x:Key="AdminDiagnosticsFormMagentoUserName" xml:space="preserve">Magento Username</system:String>
+    <system:String x:Key="AdminDiagnosticsFormMagentoPassword" xml:space="preserve">Magento password</system:String>
+    <system:String x:Key="AdminDiagnosticsFormCloudUrl" xml:space="preserve">Cloud Url</system:String>
+
+    <system:String x:Key="AdminDiagnosticsGridName" xml:space="preserve">Validation</system:String>
+    <system:String x:Key="AdminDiagnosticsGridStatus" xml:space="preserve">Status</system:String>
+    <system:String x:Key="AdminDiagnosticsGridComment" xml:space="preserve">Comment</system:String>
+
+    <system:String x:Key="AdminShipmentSettingsHeading" xml:space="preserve">SHIPING METHOD SETTINGS</system:String>
+    <system:String x:Key="AdminCarrier" xml:space="preserve">Carrier: </system:String>
+    <system:String x:Key="AdminGpShippingMethod" xml:space="preserve">GP Shipping method: </system:String>
+    <system:String x:Key="AdminMagentoShippingMethod" xml:space="preserve">Magento Shipping method: </system:String>
+    <system:String x:Key="AdminShipmentGridCarrier" xml:space="preserve">Carrier</system:String>
+    <system:String x:Key="AdminShipmentGpShipment" xml:space="preserve">GP Shipment Id</system:String>
+    <system:String x:Key="AdminShipmentId" xml:space="preserve">Shipment Id</system:String>
+    <system:String x:Key="AdminShipmentMagentoShipment" xml:space="preserve">Magento Shipment Id</system:String>
+    <system:String x:Key="AdminShipmentDescription" xml:space="preserve">Description</system:String>
+    <system:String x:Key="AdminShipmentDescriptionC" xml:space="preserve">Description :</system:String>
+    <system:String x:Key="AdminShipmentCarrier" xml:space="preserve">Add new Carrier</system:String>
+    <system:String x:Key="AdminShipmentShipment" xml:space="preserve">Add new Shipment</system:String>
+    <system:String x:Key="AdminShipmentPopupHeader" xml:space="preserve">SHIPPING METHOD MAPPING </system:String>
+    <system:String x:Key="AdminShipmentGpShipmentId" xml:space="preserve">GP Shipment Id : </system:String>
+    <system:String x:Key="AdminShipmentMagentoShipmentId" xml:space="preserve">Magento Shipment Id : </system:String>
+    <system:String x:Key="AdminShipmentButtonSave" xml:space="preserve">Save</system:String>
+    <system:String x:Key="AdminShipmentSettingsCarrierId" xml:space="preserve">Carrier Id : </system:String>
+    <system:String x:Key="AdminShipmentSettingsCarrierDesc" xml:space="preserve">Carrier Description : </system:String>
+
+    <system:String x:Key="AdminCarrierSettingsHeading" xml:space="preserve">CARRIER SETTINGS</system:String>
+    <system:String x:Key="AdminCarrierSettingsAddNew" xml:space="preserve">Add new Carrier</system:String>
+    <system:String x:Key="AdminCarrierSettingsGridCarrierId" xml:space="preserve">Carrier Id</system:String>
+    <system:String x:Key="AdminCarrierSettingsGridCarrierDescription" xml:space="preserve">Carrier Description</system:String>
+    <system:String x:Key="AdminCarrierSettingsFormHeading" xml:space="preserve">Carrier Settings</system:String>
+    <system:String x:Key="AdminCarrierSettingsFormCarrier" xml:space="preserve">Carrier Id: </system:String>
+    <system:String x:Key="AdminCarrierSettingsFormCarrierDescription" xml:space="preserve">Carrier Description: </system:String>
+
+    <system:String x:Key="AdminPaymentPayment" xml:space="preserve">Add new Payment</system:String>
+    <system:String x:Key="AdminPaymentPopupHeader" xml:space="preserve">PAYMENT MAPPING </system:String>
+    <system:String x:Key="AdminPaymentGpPaymentName" xml:space="preserve">GP Payment Name : </system:String>
+    <system:String x:Key="AdminPaymentGpPayment" xml:space="preserve">GP Payment Name</system:String>
+    <system:String x:Key="AdminPaymentMagentoPayment" xml:space="preserve">Magento Payment Name</system:String>
+    <system:String x:Key="AdminPaymentSettingsHeading" xml:space="preserve">PAYMENT SETTINGS</system:String>
+    <system:String x:Key="AdminMagentoPaymentName" xml:space="preserve">Magento Payment Name: </system:String>
+    <system:String x:Key="AdminMagentoIsDefaultMagento" xml:space="preserve">Is Default for Magento? </system:String>
+    <system:String x:Key="AdminMagentoIsDefaultMagentoTooltip" xml:space="preserve">If this values is Checked and multiple magento payment methods mapping to single GP payment method, then this magento value will be used in reverse sync orders </system:String>
+    <system:String x:Key="AdminMagentoIsDefaultErp" xml:space="preserve">Is Default for GP? </system:String>
+    <system:String x:Key="AdminMagentoIsDefaultErpTooltip" xml:space="preserve">If this values is Checked and multiple GP payment methods mapping to single Magento payment method, then this GP value will be used in forward sync orders </system:String>
+
+    <system:String x:Key="AdminDocumentTypesHeading" xml:space="preserve">DOCUMENT TYPES</system:String>
+    <system:String x:Key="AdminDocumentTypeAddNew" xml:space="preserve">Add New Document Type</system:String>
+    <system:String x:Key="AdminDocumentTypeGridErpDocumentId" xml:space="preserve">Erp Document Id</system:String>
+    <system:String x:Key="AdminDocumentTypeGridErpDocumentPrefix" xml:space="preserve">Erp Document Prefix</system:String>
+    <system:String x:Key="AdminDocumentTypeGridOrigin" xml:space="preserve">Orgin</system:String>
+    <system:String x:Key="AdminDocumentTypeGridErpOriginType" xml:space="preserve">Erp Origin Type</system:String>
+    <system:String x:Key="AdminDocumentTypeGridSopType" xml:space="preserve">Sop Type</system:String>
+    <system:String x:Key="AdminDocumentTypeFormHeading" xml:space="preserve">DOCUMENT TYPE SETTING</system:String>
+    <system:String x:Key="AdminDocumentTypeFormOrigin" xml:space="preserve">Origin</system:String>
+    <system:String x:Key="AdminDocumentTypeFormDocumentType" xml:space="preserve">Document Id</system:String>
+    <system:String x:Key="AdminDocumentTypeFormSopType" xml:space="preserve">Sop Type</system:String>
+</ResourceDictionary>

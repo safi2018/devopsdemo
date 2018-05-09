@@ -1,0 +1,213 @@
+﻿<UserControl
+    x:Class="I95Dev.Connector.UI.Views.Reports.ExclusionsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    mc:Ignorable="d"
+    d:DesignHeight="650"
+    d:DesignWidth="900"
+    xmlns:reports="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Reports;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Controls;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls1="clr-namespace:I95Dev.Connector.UI.Controls"
+    xmlns:md="https://github.com/fantasticfiasco/mvvm-dialogs"
+    md:DialogServiceViews.IsRegistered="True"
+    d:DataContext="{d:DesignInstance reports:ExclusionViewModel}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Background="{StaticResource PanelBackground}">
+            <TextBlock
+                Text="{DynamicResource ReportsExclusionsGbHeading}"
+                Style="{StaticResource PanelHeader}"
+                Margin="5,5,0,5" />
+
+            <Grid
+                Margin="10,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    <TextBlock
+                        Style="{StaticResource TextBlockLeft}"
+                        Text="{DynamicResource ReportsExclusionsFormEntity}" />
+                    <ComboBox
+                        Width="200"
+                        SelectedValue="{Binding SearchModel.EntityId,Mode=TwoWay}"
+                        DisplayMemberPath="Name"
+                        SelectedValuePath="Value"
+                        ItemsSource="{Binding Entities}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    <TextBlock
+                        Style="{StaticResource TextBlockLeft}"
+                        Text="{DynamicResource ReportsExclusionsFormRecordId}" />
+                    <TextBox
+                        Width="200"
+                        Text="{Binding SearchModel.RecordNumber,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="2">
+                    <TextBlock
+                        Style="{StaticResource TextBlockLeft}"
+                        Text="{DynamicResource ReportsExclusionsFormCreatedTime}" />
+                    <controls1:DateTimePicker
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding SearchModel.FromDate.HasValue,Mode=TwoWay}"
+                        SelectedDate="{Binding SearchModel.FromDate.Date,Mode=TwoWay}" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="3">
+                    <TextBlock
+                        Text="{DynamicResource ReportsExclusionsFormTo}"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <controls1:DateTimePicker
+                        Width="200"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding SearchModel.ToDate.HasValue,Mode=TwoWay}"
+                        SelectedDate="{Binding SearchModel.ToDate.Date,Mode=TwoWay}" />
+                </StackPanel>
+
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Width="100"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,5,0"
+                    Content="{StaticResource ButtonReset}"
+                    Command="{Binding ResetCommand}"
+                    Style="{StaticResource FormButton}" />
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Width="120"
+                    HorizontalAlignment="Left"
+                    Margin="5,0,0,0"
+                    Content="{StaticResource ButtonFind}"
+                    Command="{Binding FindCommand}"
+                    IsDefault="True"
+                    Style="{StaticResource FormButton}" />
+            </Grid>
+        </StackPanel>
+
+        <Grid
+            Grid.Row="1"
+            Background="{StaticResource PanelBackground}"
+            Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+            <controls1:Pager
+                Grid.Row="0"
+                HorizontalAlignment="Left" />
+            <ListView
+                Grid.Row="1"
+                SelectionMode="Single"
+                controls:GridViewSort.AutoSort="True"
+                ItemsSource="{Binding ViewList.View}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"
+                controls:ListViewLayoutManager.Enabled="True"
+                Name="ListViewExclusions">
+                <ListView.View>
+                    <GridView
+                        AllowsColumnReorder="False">
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding Id}"
+                            controls:GridViewSort.PropertyName="Id"
+                            Header="{DynamicResource ReportsExclusionsGridId}"
+                            controls:ProportionalColumn.Width="1.5" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding EntityName}"
+                            controls:GridViewSort.PropertyName="EntityName"
+                            Header="{DynamicResource ReportsExclusionsGridEntityName}"
+                            controls:ProportionalColumn.Width="1.5" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding RecordId}"
+                            controls:GridViewSort.PropertyName="RecordId"
+                            Header="{DynamicResource ReportsExclusionsGridRecordId}"
+                            controls:ProportionalColumn.Width="1.5" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding CreatedTime}"
+                            controls:GridViewSort.PropertyName="CreatedTime"
+                            Header="{DynamicResource ReportsExclusionsGridCreatedTime}"
+                            controls:ProportionalColumn.Width="1.5" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding Parameters}"
+                            Header="{DynamicResource ReportsExclusionsGridParameters}"
+                            controls:ProportionalColumn.Width="4" />
+                        <GridViewColumn
+                            Width="70"
+                            Header="{DynamicResource ReportsExclusionsGridView}">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button
+                                        Style="{StaticResource BorderLessButton}"
+                                        Height="25"
+                                        Width="25"
+                                        BorderBrush="{StaticResource PanelBackground}"
+                                        CommandParameter="{Binding}"
+                                        Command="{Binding DataContext.ViewRecordCommand,ElementName=ListViewExclusions}"
+                                        Margin="0,0,5,0"
+                                        VerticalAlignment="Center">
+                                        <Button.Content>
+                                            <Rectangle
+                                                Width="18"
+                                                Height="18"
+                                                Fill="{StaticResource BlackBrush}"
+                                                HorizontalAlignment="Left">
+                                                <Rectangle.OpacityMask>
+                                                    <VisualBrush
+                                                        Stretch="Uniform"
+                                                        Visual="{DynamicResource View}" />
+                                                </Rectangle.OpacityMask>
+                                            </Rectangle>
+                                        </Button.Content>
+                                    </Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <controls1:FooterPager
+                Grid.Row="2"
+                HorizontalAlignment="Right" />
+        </Grid>
+    </Grid>
+</UserControl>

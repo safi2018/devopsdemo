@@ -1,0 +1,28 @@
+<EventCategories>
+  <EventCategory Name="General" IsMailRequired="0" Id="1" ParentId="0">
+    <CategoryMapping ExceptionType="System.Exception"></CategoryMapping>
+  </EventCategory>
+
+  <EventCategory Name="Network Exceptions" IsMailRequired="1" Id="2" ParentId="0" />
+
+  <EventCategory Name="Sql Exceptions" IsMailRequired="1" Id="3" ParentId="2">
+    <CategoryMapping ExceptionType="System.Data.SqlClient.SqlException" />
+  </EventCategory>
+
+  <EventCategory Name="ODBC Exception" IsMailRequired="0" Id="4" ParentId="3">
+    <CategoryMapping ExceptionType="System.Data.Odbc.OdbcException" />
+  </EventCategory>
+
+  <EventCategory Name="Web Exceptions" IsMailRequired="1" Id="5" ParentId="2">
+    <CategoryMapping ExceptionType="System.Net.WebException" />
+  </EventCategory>
+
+  <EventCategory Name="Mail Exceptions" IsMailRequired="0" ParentId="2" Id="6">
+    <CategoryMapping ExceptionType="System.Net.Mail.SmtpException" />
+  </EventCategory>
+
+  <EventCategory Name="Windows Exceptions" IsMailRequired="1" ParentId="0" Id="7">
+    <CategoryMapping ExceptionType="System.Security.SecurityException" />
+    <CategoryMapping ExceptionType="System.IO.FileNotFoundException" />
+  </EventCategory>
+</EventCategories>

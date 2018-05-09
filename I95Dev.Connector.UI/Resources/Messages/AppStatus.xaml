@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="DefaultStatus">Ready.</system:String>
+    <system:String x:Key="Loading">Loading.</system:String>
+    <system:String x:Key="NextPageStatus">Fetching next page data.</system:String>
+    <system:String x:Key="DataUpdateSuccess">Data update is successful.</system:String>
+    <system:String x:Key="NothingUpdated">Nothing is updated.</system:String>
+    <system:String x:Key="AllFieldsMandatory">All fields are required</system:String>
+    <system:String x:Key="CaptionInfo">Information</system:String>
+    <system:String x:Key="CaptionWarning">Warning</system:String>
+    <system:String x:Key="CaptionError">Error</system:String>
+    <system:String x:Key="SchedulerEnableDone">{0} scheduler enabled</system:String>
+    <system:String x:Key="SchedulerDisableDone">{0} scheduler disabled</system:String>
+    <system:String x:Key="SchedulerIsRunning">{0} scheduler is running</system:String>
+    <system:String x:Key="SchedulerIsStopped">{0} scheduler is stopped</system:String>
+    <system:String x:Key="UnableToCreateScheduler">Unable to create the scheduler with the name {0}. Exception Message : {1}</system:String>
+    <system:String x:Key="SchedulerCreated">{0} scheduler created successfully</system:String>
+    <system:String x:Key="ConfigurationMissing">Configuration Value is missing with the Key:</system:String>
+    <system:String x:Key="InvalidPassword">Invalid Password. Please enter the correct password.</system:String>
+    <system:String x:Key="PasswordIsRequired">Password is required</system:String>
+    <system:String x:Key="NoRecordsToShow">No records found to show</system:String>
+</ResourceDictionary>

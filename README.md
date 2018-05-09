@@ -1,0 +1,1 @@
+This repository contains the code for GP platinum connector

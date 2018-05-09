@@ -1,0 +1,281 @@
+﻿<UserControl
+    x:Name="UserControl"
+    x:Class="I95Dev.Connector.UI.Views.LogFile.LogFilesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:logFile="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.LogFile;assembly=I95Dev.Connector.UI.Base"
+    xmlns:helpers="clr-namespace:I95Dev.Connector.UI.Base.Helpers;assembly=I95Dev.Connector.UI.Base"
+    xmlns:validations="clr-namespace:I95Dev.Connector.UI.Base.Services.Validations;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Controls;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls1="clr-namespace:I95Dev.Connector.UI.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="700"
+    d:DesignWidth="900"
+    d:DataContext="{d:DesignInstance logFile:LogFileViewModel}">
+
+    <UserControl.InputBindings>
+        <KeyBinding
+            Command="{Binding Path=FindCommand}"
+            Key="F5" />
+    </UserControl.InputBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            Text="{DynamicResource LogfileHeading}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+
+        <StackPanel
+            Grid.Row="1"
+            Background="{StaticResource PanelBackground}">
+            <TextBlock
+                Text="{DynamicResource LogfileGbHeading}"
+                Style="{StaticResource PanelHeader}"
+                Margin="5,5,0,5" />
+            <Grid
+                Margin="10,0,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="15" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="0">
+                    <TextBlock
+                        Style="{StaticResource TextBlockLeft}"
+                        Text="{StaticResource LogfileFormFileName}" />
+                    <TextBox
+                        Text="{Binding FileName,Mode=TwoWay}"
+                        Width="200" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Row="1"
+                    Grid.Column="1">
+                    <TextBlock
+                        Style="{StaticResource TextBlockLeft}"
+                        Text="{StaticResource LogfileFormFileSize}" />
+                    <StackPanel
+                        Orientation="Horizontal"
+                        Margin="1">
+                        <ComboBox
+                            Width="Auto"
+                            ItemsSource="{Binding Source={helpers:EnumBindingSource {x:Type helpers:Comparison}}}"
+                            SelectedValue="{Binding ComparisonType,Mode=TwoWay}"
+                            Style="{StaticResource RightComboBox}" />
+                        <TextBox
+                            Width="100"
+                            Margin="5,0,0,0">
+                            <TextBox.Text>
+                                <Binding
+                                    Path="FileSize"
+                                    UpdateSourceTrigger="PropertyChanged"
+                                    ValidatesOnDataErrors="True"
+                                    Mode="TwoWay">
+                                    <Binding.ValidationRules>
+                                        <validations:DecimalValidation />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </StackPanel>
+
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Style="{StaticResource TextBlockLeft}"
+                    Text="{StaticResource LogfileFormCreatedTime}"
+                    Margin="0,10,0,0" />
+                <StackPanel
+                    Grid.Row="3"
+                    Grid.Column="0">
+                    <TextBlock
+                        Text="From"
+                        FontSize="11"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <controls1:DateTimePicker
+                        Width="165"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding CreatedFromChecked,Mode=TwoWay}"
+                        SelectedDate="{Binding CreatedFrom,Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="3"
+                    Grid.Column="1">
+                    <TextBlock
+                        Text=" To "
+                        FontSize="11"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <controls1:DateTimePicker
+                        Width="165"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding CreatedToChecked,Mode=TwoWay}"
+                        SelectedDate="{Binding CreatedTo,Mode=TwoWay}" />
+                </StackPanel>
+
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Style="{StaticResource TextBlockLeft}"
+                    Text="{StaticResource LogfileFormUpdatedTime}"
+                    Margin="0,10,0,0" />
+                <StackPanel
+                    Grid.Row="3"
+                    Grid.Column="2">
+                    <TextBlock
+                        Text="From"
+                        FontSize="11"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <controls1:DateTimePicker
+                        Width="165"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding UpdateFromChecked,Mode=TwoWay}"
+                        SelectedDate="{Binding UpdatedFrom,Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="3"
+                    Grid.Column="3">
+                    <TextBlock
+                        Text=" To "
+                        FontSize="11"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <controls1:DateTimePicker
+                        Width="165"
+                        HorizontalAlignment="Left"
+                        DateFormat="yyyy/MM/dd HH:mm:ss"
+                        ShowCheckBox="True"
+                        IsCheckBoxChecked="{Binding UpdateToChecked,Mode=TwoWay}"
+                        SelectedDate="{Binding UpdatedTo,Mode=TwoWay}" />
+                </StackPanel>
+
+                <Button
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Style="{StaticResource FormButton}"
+                    Width="100"
+                    Content="{StaticResource ButtonReset}"
+                    Command="{Binding ResetCommand}"
+                    Margin="0,0,5,0" />
+                <Button
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    HorizontalAlignment="Left"
+                    Style="{StaticResource FormButton}"
+                    Width="120"
+                    Content="{StaticResource ButtonFind}"
+                    Command="{Binding FindCommand}"
+                    IsDefault="True"
+                    Margin="5,0,0,0" />
+            </Grid>
+        </StackPanel>
+
+        <Grid
+            Grid.Row="2"
+            Background="{StaticResource PanelBackground}"
+            Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <controls1:Pager
+                HorizontalAlignment="Left"
+                Grid.Row="0" />
+
+            <ListView
+                Margin="5,0,5,5"
+                Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                SelectionMode="Single"
+                controls:GridViewSort.AutoSort="True"
+                ItemsSource="{Binding ViewList.View}"
+                VerticalAlignment="Top"
+                controls:ListViewLayoutManager.Enabled="True">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn
+                            controls:GridViewSort.PropertyName="FileName"
+                            Header="{StaticResource LogfileGridFileName}"
+                            controls:ProportionalColumn.Width="2">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock>
+                                        <Hyperlink
+                                            Command="{Binding DataContext.ViewFileCommand, ElementName=UserControl}"
+                                            CommandParameter="{Binding FilePath}">
+                                            <TextBlock
+                                                Text="{Binding FileName}" />
+                                        </Hyperlink>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding CreatedTime,StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                            controls:GridViewSort.PropertyName="CreatedTime"
+                            Header="{StaticResource LogfileGridCreatedTime}"
+                            controls:ProportionalColumn.Width="1" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding LastUpdatedTime,StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                            controls:GridViewSort.PropertyName="LastUpdatedTime"
+                            Header="{StaticResource LogfileGridUpdatedTime}"
+                            controls:ProportionalColumn.Width="1" />
+                        <GridViewColumn
+                            DisplayMemberBinding="{Binding FileType,StringFormat='yyyy-MM-dd HH:mm:ss'}"
+                            controls:GridViewSort.PropertyName="FileType"
+                            Header="{StaticResource LogfileGridFileType}"
+                            controls:ProportionalColumn.Width="0.45" />
+                        <GridViewColumn
+                            Header="{StaticResource LogfileGridFileSize}"
+                            controls:GridViewSort.PropertyName="FileSize"
+                            controls:ProportionalColumn.Width="1">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel
+                                        HorizontalAlignment="Right"
+                                        Orientation="Horizontal">
+                                        <TextBlock Text="{Binding FileSize}" />
+                                        <TextBlock Text=" KB " />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <controls1:FooterPager
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center" />
+        </Grid>
+    </Grid>
+</UserControl>

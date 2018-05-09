@@ -1,0 +1,272 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    x:Class="I95Dev.Connector.UI.Views.Admin.ConfigurationView"
+    xmlns:converters="clr-namespace:I95Dev.Connector.UI.Base.Services.Converters;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls="clr-namespace:I95Dev.Connector.UI.Base.Helpers.Controls;assembly=I95Dev.Connector.UI.Base"
+    xmlns:admin="clr-namespace:I95Dev.Connector.UI.Base.ViewModels.Admin;assembly=I95Dev.Connector.UI.Base"
+    xmlns:controls1="clr-namespace:I95Dev.Connector.UI.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="600"
+    d:DesignWidth="900"
+    d:DataContext="{d:DesignInstance Type=admin:ConfigurationViewModel}">
+
+    <UserControl.Resources>
+        <converters:BoolInverter x:Key="BoolInverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="{DynamicResource PageHeadingHeight}" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Text="{DynamicResource AdminConfigurationSettingsHeading}"
+            Style="{StaticResource PageHeader}"
+            Margin="5,5,0,5" />
+
+        <Grid
+            Grid.Row="1"
+            Margin="5,5,0,5"
+            Background="{StaticResource PanelBackground}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5.5*" />
+                <ColumnDefinition Width="4.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <GroupBox Margin="0,0,5,0">
+                <GroupBox.Header>
+                    <StackPanel>
+                        <CheckBox
+                            x:Name="CheckBoxLog"
+                            IsChecked="{Binding IsUpdateLogConfiguration, Mode=TwoWay}"
+                            Content="{DynamicResource AdminConfigurationSettingsLogHeader}" />
+                    </StackPanel>
+                </GroupBox.Header>
+                <Grid
+                    IsEnabled="{Binding IsChecked, ElementName=CheckBoxLog,Mode=TwoWay}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2.2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="{StaticResource DefaultRowHeight}" />
+                        <RowDefinition Height="{StaticResource DefaultRowHeight}" />
+                        <RowDefinition Height="{StaticResource DefaultRowHeight}" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="1"
+                        Text="{DynamicResource AdminConfigurationSettingsForm1LogDays}"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <ComboBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Width="150"
+                        HorizontalAlignment="Left"
+                        FontSize="{StaticResource FontSize}"
+                        ItemsSource="{Binding Days}"
+                        SelectedValuePath="Value"
+                        DisplayMemberPath="Name"
+                        SelectedValue="{Binding LogDeleteDays,Mode=TwoWay}" />
+
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="{DynamicResource AdminConfigurationSettingsForm1DeleteFiles}"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource TextBlockLeft}" />
+                    <StackPanel
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal">
+                        <RadioButton
+                            HorizontalAlignment="Left"
+                            FontSize="{StaticResource FontSize}"
+                            IsChecked="{Binding IsDeleteLogFiles,Mode=TwoWay}"
+                            Content="{DynamicResource AdminConfigurationSettingsForm1Rb11}"
+                            Margin="0,0,5,0" />
+                        <RadioButton
+                            x:Name="RadioButton"
+                            HorizontalAlignment="Left"
+                            FontSize="{StaticResource FontSize}"
+                            IsChecked="{Binding IsDeleteLogFiles, Converter={StaticResource BoolInverter},Mode=TwoWay}"
+                            Content="{DynamicResource AdminConfigurationSettingsForm1Rb12}" />
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="{DynamicResource AdminConfigurationSettingsForm1LogFileMonths}"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource TextBlockLeft}"
+                        Visibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=RadioButton}" />
+                    <ComboBox
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Width="150"
+                        HorizontalAlignment="Left"
+                        FontSize="{StaticResource FontSize}"
+                        ItemsSource="{Binding Months}"
+                        SelectedValuePath="Value"
+                        DisplayMemberPath="Name"
+                        Visibility="{Binding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ElementName=RadioButton}"
+                        SelectedValue="{Binding LogDeleteMonths,Mode=TwoWay}" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox
+                Margin="0,5,5,0"
+                Grid.Row="1"
+                Grid.Column="0">
+                <GroupBox.Header>
+                    <StackPanel>
+                        <CheckBox
+                            x:Name="CheckBoxEntity"
+                            IsChecked="{Binding IsUpdateEntityConfiguration, Mode=TwoWay}"
+                            Content="{DynamicResource AdminConfigurationSettingsForm3Heading}" />
+                    </StackPanel>
+                </GroupBox.Header>
+                <ScrollViewer
+                    VerticalScrollBarVisibility="Auto">
+                    <Grid
+                        IsEnabled="{Binding IsChecked, ElementName=CheckBoxEntity,Mode=TwoWay}">
+                        <ListView
+                            ItemsSource="{Binding EntityData}"
+                            VerticalAlignment="Top"
+                            SelectionMode="Single"
+                            controls:ListViewLayoutManager.Enabled="True">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn
+                                        Header="{DynamicResource AdminConfigurationSettingsGrid1Entity}"
+                                        DisplayMemberBinding="{Binding EntityName,Mode=OneWay}"
+                                        controls:ProportionalColumn.Width="1" />
+                                    <GridViewColumn
+                                        Header="{DynamicResource AdminConfigurationSettingsGrid2Sync1}"
+                                        controls:ProportionalColumn.Width="1">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox
+                                                    IsChecked="{Binding IsInboundActive,Mode=TwoWay}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn
+                                        Header="{DynamicResource AdminConfigurationSettingsGrid2Sync2}"
+                                        controls:ProportionalColumn.Width="1">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <CheckBox
+                                                    IsChecked="{Binding IsOutboundActive,Mode=TwoWay}" />
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Grid>
+                </ScrollViewer>
+            </GroupBox>
+
+            <GroupBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0"
+                Grid.RowSpan="2">
+                <GroupBox.Header>
+                    <StackPanel>
+                        <CheckBox
+                            x:Name="CheckBoxScheduler"
+                            IsChecked="{Binding IsUpdateSchedulerConfiguration, Mode=TwoWay}"
+                            Content="{DynamicResource AdminConfigurationSettingsForm2Heading}" />
+                    </StackPanel>
+                </GroupBox.Header>
+                <ScrollViewer
+                    VerticalScrollBarVisibility="Auto">
+
+                    <Grid Margin="5,10,5,5">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="{StaticResource GridHeaderBackGround}" Height="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock
+                                Text="Entity Name"
+                                FontWeight="SemiBold"
+                                FontSize="11"
+                                Margin="5,0,0,2"
+                                VerticalAlignment="Center" />
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontWeight="SemiBold"
+                                FontSize="11"
+                                Margin="5,0,0,2"
+                                VerticalAlignment="Center"
+                                Text="Last sync Time" />
+                        </Grid>
+
+                        <Grid
+                            Grid.Row="1"
+                            Margin="5,5,5,0"
+                            IsEnabled="{Binding IsChecked, ElementName=CheckBoxScheduler,Mode=TwoWay}">
+                            <ItemsControl
+                            ItemsSource="{Binding SchedulerData}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="{Binding EntityName,Mode=TwoWay}" />
+
+                                            <controls1:DateTimePicker
+                                            Grid.Column="1"
+                                            ShowCheckBox="True"
+                                            ShowCalendarButton="True"
+                                            SelectedDate="{Binding LastSyncTime,Mode=TwoWay}"
+                                            IsCheckBoxChecked="{Binding IsChecked,Mode=TwoWay}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </GroupBox>
+
+            <Button
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Grid.Column="0"
+                Content="{StaticResource ButtonUpdate}"
+                Width="90"
+                Command="{Binding UpdateConfiguration}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Style="{StaticResource FormButton}" />
+        </Grid>
+    </Grid>
+</UserControl>
